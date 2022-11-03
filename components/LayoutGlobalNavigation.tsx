@@ -8,7 +8,6 @@ import { Listbox } from '@headlessui/react';
 import { CheckIcon } from '@heroicons/react/outline';
 
 import { CalculatorIcon, UserCircleIcon } from '@heroicons/react/outline';
-import GlobalNavigationDark from './GlobalNavigationDark';
 import Tools, { ToolsLight } from './Tools';
 
 interface LayoutType {
@@ -53,12 +52,12 @@ export default function LayoutGlobalNavigation({
         <meta name='twitter:image' content={image} />
       </Head>
 
-      <GlobalNavigationDark />
+      <GlobalNavigation />
       {/*  top-[49px] */}
       <div className='sticky inset-x-0 top-0 z-50 mb-2.5 sm:mb-10 w-full border-b border-t border-gray-300 bg-gray-100/80 saturate-150 backdrop-blur py-1.5'>
         <section className='mx-auto flex max-w-5xl items-center justify-between px-3 lg:px-0'>
           <div className='text-xl font-semibold text-zinc-900'>{globalNavigationTitle}</div>
-          <ToolsLight/>
+          <ToolsLight />
         </section>
       </div>
       {/* <div className='text-4xl font-bold text-zinc-800 max-w-4xl px-3 xl:px-0 mx-auto py-4'>{globalNavigationTitle}</div> */}

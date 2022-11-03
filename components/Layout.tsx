@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import Header from './Header';
 import GlobalNavigation from './GlobalNavigation';
 import GlobalNavigationMobile from './GlobalNavigationMobile';
-import GlobalNavigationDark from './GlobalNavigationDark';
 
 interface LayoutType {
   children: React.ReactNode;
@@ -25,7 +24,7 @@ export default function Layout({ children, browserTitle, description }: LayoutTy
         <meta name='theme-color' content='#27272a' />
         <meta name='robots' content='follow, index' />
         <meta content={description} name='description' />
-        
+
         <meta property='og:type' content={type} />
         <meta property='og:site_name' content='Haris Lab' />
         <meta property='og:description' content={description} />
@@ -39,7 +38,7 @@ export default function Layout({ children, browserTitle, description }: LayoutTy
         <meta name='twitter:image' content={image} />
       </Head>
 
-      <GlobalNavigationDark />
+      <GlobalNavigation />
 
       {router.asPath === '/kalkulator' && <Header title='Kalkulator' />}
       {router.asPath === '/matematika' && <Header title='Matematika' />}
