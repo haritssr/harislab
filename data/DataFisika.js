@@ -1,27 +1,27 @@
 export const DataFisika = [
   {
-    domain: 'PENGUKURAN',
+    domain: 'Pengukuran',
     chapters: [
       {
         title: 'Besaran',
-        contents: ['Pengantar Besaran', 'Besaran pokok', 'Besaran satuan'],
+        contents: ['Pengantar', 'Besaran pokok', 'Besaran satuan'],
       },
       {
         title: 'Satuan',
-        contents: ['Pengantar Satuan', 'Daftar satuan', 'Konversi satuan'],
+        contents: ['Pengantar', 'Daftar satuan', 'Konversi satuan'],
       },
       {
         title: 'Dimensi',
-        contents: ['Pengantar Dimensi', 'Daftar dimensi', 'Analisis dimensi'],
+        contents: ['Pengantar', 'Daftar dimensi', 'Analisis dimensi'],
       },
       {
         title: 'Notasi Ilmiah',
-        contents: ['Pengantar Notasi Ilmiah', 'Angka penting'],
+        contents: ['Pengantar', 'Angka penting'],
       },
       {
         title: 'Ketepatan',
         contents: [
-          'Pengantar Ketepatan',
+          'Pengantar',
           'Akurasi',
           'Presisi',
           'Keteledoran',
@@ -31,31 +31,21 @@ export const DataFisika = [
       },
       {
         title: 'Alat Ukur',
-        contents: [
-          'Pengantar Alat Ukur',
-          'Jangka sorong',
-          'Miktometer sekrup',
-          'Mistar',
-          'Tahun Cahaya',
-        ],
+        contents: ['Pengantar', 'Jangka sorong', 'Miktometer sekrup', 'Mistar', 'Tahun Cahaya'],
       },
     ],
   },
   {
-    domain: 'GERAK',
+    domain: 'Gerak',
     chapters: [
       {
         title: 'Gerak Lurus',
-        contents: [
-          'Pengantar Gerak Lurus',
-          'Gerak Lurus Beraturan',
-          'Gerak Lurus Berubah Beraturan',
-        ],
+        contents: ['Pengantar', 'Gerak Lurus Beraturan', 'Gerak Lurus Berubah Beraturan'],
       },
       {
         title: 'Gerak Rotasi',
         contents: [
-          'Pengantar Gerak Rotasi',
+          'Pengantar',
           'Momentum Sudut',
           'Torsi - Momen Gaya',
           'Momen Inersia',
@@ -63,12 +53,12 @@ export const DataFisika = [
       },
       {
         title: 'Gerak Parabola',
-        contents: ['Pengantar Gerak Parabola', 'Gerak Parabola Simetri', 'Gerak Parabola Asimetri'],
+        contents: ['Pengantar', 'Gerak Parabola Simetri', 'Gerak Parabola Asimetri'],
       },
       {
         title: 'Gerak Melingkar',
         contents: [
-          'Pengantar Gerak Melingkar',
+          'Pengantar',
           'Gerak Melingkar Beraturan',
           'Percepatan Setripetal',
           'Momentum Sudut',
@@ -78,14 +68,19 @@ export const DataFisika = [
     ],
   },
   {
-    domain: 'DINAMIKA',
+    domain: 'Dinamika',
     chapters: [
-      { title: 'Usaha', contents: ['a', 'b'] },
+      { title: 'Gaya', contents: ['Gaya Newton', 'Gaya Gesek', 'Gaya Gravitasi'] },
+      { title: 'Usaha', contents: ['Pengantar Usaha', 'Hubungan usaha dengan energi'] },
       { title: 'Momentum', contents: ['Pengantar momentum', 'Hukum kekekalan momentum', 'Impuls'] },
+      {
+        title: 'Energi',
+        contents: ['Pengantar', 'Energi Kinetik', 'Energi Potensial', 'Energi Menanik'],
+      },
     ],
   },
   {
-    domain: 'FLUIDA',
+    domain: 'Fluida',
     chapters: [
       {
         title: 'Fluida Statis',
@@ -104,21 +99,16 @@ export const DataFisika = [
     ],
   },
   {
-    domain: 'GELOMBANG',
+    domain: 'Gelombang',
     chapters: [
       {
         title: 'Gelombang Dasar',
-        contents: [
-          'Pengantar Gelombang Dasar',
-          'Jenis gelombang',
-          'Sifat gelombang',
-          'Properti gelombang',
-        ],
+        contents: ['Pengantar', 'Jenis gelombang', 'Sifat gelombang', 'Properti gelombang'],
       },
       {
         title: 'Gelombang Bunyi',
         contents: [
-          'Pengantar Gelombang Bunyi',
+          'Pengantar',
           'Taraf intensitas bunyi',
           'Intensitas bunyi',
           'Pipa organa',
@@ -128,24 +118,19 @@ export const DataFisika = [
         ],
       },
       {
-        title: 'Gelombang ElektroMagnetik',
-        contents: [
-          'Pengantar Gelombang ElektroMagnetik',
-          'Sifat gelombang elektromagnetik',
-          'Spektrum gelombang elektromagnetik',
-          'Energi gelombang elektromagnetik',
-        ],
+        title: 'Gelombang Elektromagnetik',
+        contents: ['Pengantar', 'Sifat', 'Spektrum', 'Energi'],
       },
     ],
   },
 
   {
-    domain: 'TERMODINAMIKA',
+    domain: 'Termodinamika',
     chapters: [
       {
         title: 'Hukum termodinamika',
         contents: [
-          'Pengantar Hukum termodinamika',
+          'Pengantar',
           'Hukum termodinamika 0',
           'Hukum termodinamika 1',
           'Hukum termodinamika 2',
@@ -159,7 +144,7 @@ export const DataFisika = [
       {
         title: 'Kalor',
         contents: [
-          'Pengantar Kalor',
+          'Pengantar',
           'Transfer kalor',
           'Pemuaian kalor',
           'Asas Black',
@@ -171,17 +156,17 @@ export const DataFisika = [
       },
       {
         title: 'Fenomena Gas',
-        contents: ['Pengantar Fenomena Gas', 'Isobaris', 'Isokhoris', 'Isotermis', 'Adiabatis'],
+        contents: ['Pengantar', 'Isobaris', 'Isokhoris', 'Isotermis', 'Adiabatis'],
       },
     ],
   },
   {
-    domain: 'LISTRIK',
+    domain: 'Listrik',
     chapters: [
       {
         title: 'Listrik Statis',
         contents: [
-          'Pengantar Listrik Statis',
+          'Pengantar',
           'Muatan listrik',
           'Gaya Listrik',
           'Medan Listrik',
@@ -195,7 +180,7 @@ export const DataFisika = [
       {
         title: 'Listrik Dinamis',
         contents: [
-          'Pengantar Listrik Dinamis',
+          'Pengantar',
           'Arus Listrik',
           'Resistansi Listrik',
           'Tegangan Listrik',
@@ -210,7 +195,7 @@ export const DataFisika = [
       {
         title: 'Magnet',
         contents: [
-          'Pengantar Magnet',
+          'Pengantar',
           'Medan Magnet',
           'Gaya Magnet',
           'Fluks Magnet',

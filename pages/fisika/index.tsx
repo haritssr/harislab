@@ -1,113 +1,105 @@
-import { InternalLink } from '@/components/DesignSystem';
 import { DataFisika } from './../../data/DataFisika';
 import Link from 'next/link';
-import { Disclosure } from '@headlessui/react';
-import { ChevronBeforeFolder, Folder, File } from '@/components/Icons';
-import { BookOpenIcon } from '@/components/Icons';
 import LayoutGlobalNavigation from '@/components/LayoutGlobalNavigation';
+import CTABanner from '@/components/CTABanner';
+import { Tab } from '@headlessui/react';
+import { ChevronRightIcon, FolderIcon } from '@heroicons/react/outline';
 
 export default function Fisika() {
   return (
     <LayoutGlobalNavigation
-      domain='Fisika'
+      globalNavigationTitle='Fisika'
       browserTitle='Fisika'
-      description='Mempelajari kegunaan dari matematika pada feno mena-fenomena fisik di seluruh alam semesta.'
+      description='Mempelajari kegunaan dari Fisika pada feno mena-fenomena fisik di seluruh alam semesta.'
     >
-      <div className='flex sm:justify-end'>
-        <div className='rounded-lg bg-white border border-zinc-500  px-2 py-1 flex items-center space-x-1 w-full sm:w-1/4'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            className='h-4 w-4 text-zinc-500'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke='currentColor'
-            strokeWidth='2'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
-            />
-          </svg>{' '}
-          <input
-            type='search'
-            placeholder='Cari di Fisika'
-            className='bg-white focus:outline-none text-zinc-500 w-full placeholder-zinc-400'
-          />
+      <Tab.Group as='div' className=''>
+        <div className='flex justify-between items-center mb-5 sm:mb-10 pb-2 sm:-mx-0'>
+          <Tab.List className=' bg-[#F0EFF6] rounded-lg p-0.5 space-x-1 w-full divide-x divide-zinc-300 sm:w-1/2 flex'>
+            <Tab as='div' className='w-full'>
+              {({ selected }) => (
+                <button
+                  className={`px-4 py-[3px] rounded-md flex items-center justify-center w-full space-x-1 ${
+                    selected
+                      ? 'bg-white shadow shadow-zinc-400/80 duration-100 text-zinc-900'
+                      : 'hover:bg-zinc-400/20 duration-100 text-zinc-700'
+                  }`}
+                >
+                  <div className='font-medium text-gray-800'>Baca</div>
+                </button>
+              )}
+            </Tab>
+            <Tab as='div' className='w-full pl-1'>
+              {({ selected }) => (
+                <button
+                  className={`px-4 py-[3px] rounded-md flex items-center justify-center w-full space-x-1 ${
+                    selected
+                      ? 'bg-white shadow shadow-zinc-400/80 duration-100 text-zinc-900'
+                      : 'hover:bg-zinc-400/20 duration-100 text-zinc-700'
+                  }`}
+                >
+                  <div className='font-medium text-gray-800'>Analisis</div>
+                </button>
+              )}
+            </Tab>
+            <Tab as='div' className='w-full pl-1'>
+              {({ selected }) => (
+                <button
+                  className={`px-4 py-[3px] rounded-md flex items-center justify-center w-full space-x-1 ${
+                    selected
+                      ? 'bg-white shadow shadow-zinc-400/80 duration-100 text-zinc-900'
+                      : 'hover:bg-zinc-400/20 duration-100 text-zinc-700'
+                  }`}
+                >
+                  <div className='font-medium text-gray-800'>Latihan</div>
+                </button>
+              )}
+            </Tab>
+          </Tab.List>
         </div>
-      </div>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-8 my-8'>
-        {DataFisika.map(({ domain, chapters }) => (
-          // bg-gray-100
-          <div key={domain} className=' rounded-lg h-fit'>
-            <Link href={`/fisika/${domain.toLowerCase()}`}>
-              <a className='inline-block text-zinc-800 pb-1 font-semibold hover:underline'>
-                {domain}
-              </a>
-            </Link>
-            <div className='bg-zinc-100 border border-zinc-300 px-2 pb-2 pt-1 rounded-md divide-y divide-gray-300 space-y-1'>
-              {chapters.map(({ title, contents }) => (
-                <Disclosure as='div' key={title} className='pt-1'>
-                  {({ open }) => (
-                    <>
-                      {/* button */}
-                      <Disclosure.Button
-                        className={`flex items-center hover:bg-zinc-200 pr-2 pl-1 py-1.5 w-full rounded-md    ${
-                          open ? 'bg-zinc-200' : ''
-                        }`}
-                      >
-                        <ChevronBeforeFolder
-                          className={`h-4 w-4  ${
-                            open ? 'rotate-90 text-zinc-700' : 'text-zinc-500'
-                          }`}
-                        />
-                        <Folder />
-                        <div
-                          className={` font-medium text-sm ${
-                            open ? 'text-zinc-800' : 'text-zinc-700'
-                          }`}
-                        >
-                          {title.toUpperCase()}
-                        </div>
-                      </Disclosure.Button>
-
-                      {/* panel */}
-                      <Disclosure.Panel
-                        className={`space-y-2 py-1 ml-3 mb-3 border-l-[1.5px] border-zinc-300 ${
-                          open ? '' : 'border-zinc-100'
-                        }`}
-                      >
-                        {contents.map(content => (
-                          <div
-                            key={content}
-                            className='flex flex-nowrap items-center space-x-1.5 pl-2.5 group cursor-pointer'
-                          >
-                            {content?.includes('Pengantar') ? (
-                              <BookOpenIcon className='h-5 w-5 min-h-fit min-w-fit text-zinc-600 group-hover:text-rose-600' />
-                            ) : (
-                              <File className='h-5 w-5 text-zinc-600 group-hover:text-rose-600 min-h-fit min-w-fit' />
-                            )}
-                            <div className='text-zinc-600 group-hover:text-rose-600  sm:group-hover:underline'>
-                              {content}
+        <Tab.Panels>
+          <Tab.Panel>
+            <section className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-8 sm:col-span-6'>
+              {DataFisika.map(({ domain, chapters }) => (
+                // bg-gray-100
+                <article key={domain} className="">
+                  <div className='flex items-center sm:items-end justify-between '>
+                    <div className='text-gray-800 font-bold pl-2 text-lg sm:pl-0'>
+                      {domain.toUpperCase()}
+                    </div>
+                  </div>
+                  <div className='divide-y divide-zinc-300 rounded-lg h-fit overflow-hidden bg-[#F0EFF6] mt-1 border border-zinc-300'>
+                    {chapters.map(({ title }) => (
+                      <Link key={title} href={`/fisika/${title.toLowerCase().replace(' ', '-')}`}>
+                        <div className='flex items-center justify-between pr-2 py-2    cursor-pointer hover:bg-zinc-400/20 pl-3'>
+                          <div className='items-center flex overflow-hidden'>
+                            {/* <Folder /> */}
+                            <FolderIcon
+                              strokeWidth={1.5}
+                              className='sm:h-[26px] h-7 w-7 sm:w-[26px] text-blue-600 mr-2 fill-blue-300'
+                            />
+                            <div className='text-zinc-700 text-[17px] truncate '>
+                              {title}
                             </div>
                           </div>
-                        ))}
-                      </Disclosure.Panel>
-                    </>
-                  )}
-                </Disclosure>
+                          <ChevronRightIcon className='h-5 w-5  duration-200 text-gray-700' />
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </article>
               ))}
-            </div>
-          </div>
-        ))}
-      </div>
+            </section>
+          </Tab.Panel>
+          <Tab.Panel>Analisis Soal</Tab.Panel>
+          <Tab.Panel>Latihan Soal</Tab.Panel>
+        </Tab.Panels>
+      </Tab.Group>
 
-      <div className='flex justify-center flex-col items-center space-y-5 mt-40'>
-        <div className='font-semibold text-xl text-zinc-700 text-center'>
-          Butuh bimbingan belajar Fisika ke rumah ?
-        </div>
-        <InternalLink name='Pesan bimbel Haris Lab sekarang' to='/bimbel' />
-      </div>
+      <CTABanner
+        title='Butuh bimbingan belajar Fisika ke rumah?'
+        description='Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+        CTA='Pesan Bimbel Fisika'
+      />
     </LayoutGlobalNavigation>
   );
 }

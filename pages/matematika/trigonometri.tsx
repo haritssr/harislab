@@ -1,8 +1,6 @@
 import 'katex/dist/katex.min.css';
 import TeX from '@matejmazur/react-katex';
 import Nature from '../../public/nature.jpg';
-import ExampleMain from '@/components/ExampleMain';
-import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
 import { TrigonometriRumus } from 'data/RumusMatematika';
 import { NavList } from '@/components/List';
@@ -75,12 +73,6 @@ export default function Trigonometri() {
         libero. Error sequi ea assumenda, minus nobis cupiditate!
       </P>
       <br />
-      <ExampleMain type='Contoh Soal Mudah'>
-        <ExampleChild type='Teori Kinetik Gas'>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa consequatur qui optio
-          libero. Error sequi ea assumenda, minus nobis cupiditate!{' '}
-        </ExampleChild>
-      </ExampleMain>
     </LayoutMateri>
   );
 }

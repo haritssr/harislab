@@ -15,10 +15,10 @@ export default function InfoBoxFitur({
 }) {
   return (
     <Link href={to}>
-      <a className='flex flex-col items-center justify-between px-4 pt-6 pb-5 space-y-2.5 duration-200 ease-out bg-zinc-50 rounded-xl border-zinc-200 hover:border-zinc-500 border'>
+      <a className='flex flex-col items-center justify-between px-4 pt-8 pb-6 space-y-4 duration-200 ease-out bg-gray-50 border border-zinc-100 rounded-xl '>
         <svg
           xmlns='http://www.w3.org/2000/svg'
-          className={`w-8 h-8 text-gray-500`}
+          className={`w-8 h-8 text-gray-700`}
           // responsive="none"
           viewBox='0 0 24 24'
           stroke='currentColor'
@@ -31,7 +31,7 @@ export default function InfoBoxFitur({
 
         <div className='mx-auto text-center text-gray-500 sm:w-5/6'>{description}</div>
 
-        <div className='flex items-center space-x-2 cursor-pointer text-harislab hover:underline'>
+        <div className='flex items-center space-x-2 hover:underline text-blue-600'>
           {ResultOfTheAction}
           <RightArrow />
         </div>
@@ -43,7 +43,7 @@ const RightArrow = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className='w-4 h-5 text-harislab'
+      className='w-4 h-5 text-blue-600 group-hover:text-zinc-100'
       fill='none'
       viewBox='0 0 24 24'
       stroke='currentColor'

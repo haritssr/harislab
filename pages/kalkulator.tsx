@@ -1,12 +1,12 @@
 import Layout from '@/components/Layout';
 import { Title, InternalLink, Topic, TitleBack } from '@/components/DesignSystem';
 import { Tab } from '@headlessui/react';
+import LayoutGlobalNavigation from '@/components/LayoutGlobalNavigation';
 
 export default function Kalkulator() {
   const tab = 'active:bg-zinc-200 rounded-md text-tiny hover:bg-white hover:shadow-md py-2 px-4';
   return (
-    <Layout browserTitle='Kalkulator' description='Kalkulator'>
-
+    <LayoutGlobalNavigation domain='Kalkulator' browserTitle='Kalkulator' description='Kalkulator'>
       <Tab.Group as='div'>
         <Tab.List className='grid grid-cols-3 gap-1 p-1 text-base text-gray-600 bg-zinc-200 rounded-lg sm:w-1/4 sm:text-tiny'>
           <Tab
@@ -44,6 +44,6 @@ export default function Kalkulator() {
           <Tab.Panel className='h-48'>Content 3</Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
-    </Layout>
+    </LayoutGlobalNavigation>
   );
 }

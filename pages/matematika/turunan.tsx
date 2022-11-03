@@ -1,9 +1,7 @@
 import 'katex/dist/katex.min.css';
 import TeX from '@matejmazur/react-katex';
 import Nature from '../../public/nature.jpg';
-import ExampleMain from '@/components/ExampleMain';
 import PenurunanRumus from '@/components/PenurunanRumus';
-import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
 import { TurunanPenurunanRumus } from 'data/PenurunanRumusMatematika';
 import { NavList } from '@/components/List';
@@ -78,12 +76,6 @@ export default function Turunan() {
         libero. Error sequi ea assumenda, minus nobis cupiditate!
       </P>
       <br />
-      <ExampleMain type='Contoh Soal Mudah'>
-        <ExampleChild type='Teori Kinetik Gas'>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa consequatur qui optio
-          libero. Error sequi ea assumenda, minus nobis cupiditate!{' '}
-        </ExampleChild>
-      </ExampleMain>
     </LayoutMateri>
   );
 }

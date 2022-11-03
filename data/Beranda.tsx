@@ -18,7 +18,7 @@ export const SayaPeduliTentang = [
     svg: 'M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z',
     title: 'Desain Website',
     description:
-      'HarisLab di desain agar informasi yang kamu butuhkan dapat diraih semudah mungkin dengan membuat arsitektur website yang sederhana dan komperhensif.',
+      'Haris Lab di desain agar informasi yang kamu butuhkan dapat diraih semudah mungkin dengan membuat arsitektur website yang sederhana dan komperhensif.',
   },
   {
     id: '4',
@@ -35,14 +35,14 @@ export const CaraSayaMenyampaikanInformasi = [
     svg: 'M12 2L2 7l10 5 10-5-10-5z M2 17l10 5 10-5 M2 12l10 5 10-5 ',
     title: 'Kerangka Kerja',
     description:
-      'Di HarisLab, semua bab pelajaran dibuat sebuah struktur informasi sedemikia rupa agar mudah diingat. Sehingga kita bisa  berekspektasi kepada setiap babnya, bahwa ini yang akan kita pelajari. Coba dan rasakan kemudahannya',
+      'Di Haris Lab, semua bab pelajaran dibuat sebuah struktur informasi sedemikia rupa agar mudah diingat. Sehingga kita bisa  berekspektasi kepada setiap babnya, bahwa ini yang akan kita pelajari. Coba dan rasakan kemudahannya',
   },
   {
     id: '2',
     svg: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z',
     title: 'Belajar Mandiri',
     description:
-      'HarisLab didesain agar siapapun terutama murid agar bisa belajar mandiri tanpa guru, bahkan tanpa buku panduan. Di sini kalian bisa mendapatkan materi apapun, kalkulator, progress belajar, mengenerate animasi dari soal.',
+      'Haris Lab didesain agar siapapun terutama murid agar bisa belajar mandiri tanpa guru, bahkan tanpa buku panduan. Di sini kalian bisa mendapatkan materi apapun, kalkulator, progress belajar, mengenerate animasi dari soal.',
   },
   {
     id: '3',
@@ -63,13 +63,13 @@ export const CaraSayaMenyampaikanInformasi = [
 export const isiFAQ = [
   {
     id: '1',
-    button: 'Apa itu HarisLab ?',
+    button: 'Apa itu Haris Lab ?',
     panel:
-      'HarisLab adalah all-in-one tempat bagi murid sma (murid kuliah juga kedepannya) untuk me-recall, menggunakan kalkulator, men-generate animasi, melihat contoh soal matematika dan fisika (+ kimia kedapannya) secara lengkap dan komperhensif sehingga murid tidak perlu buku paket dan catatan lagi',
+      'Haris Lab adalah all-in-one tempat bagi murid sma (murid kuliah juga kedepannya) untuk me-recall, menggunakan kalkulator, men-generate animasi, melihat contoh soal matematika dan fisika (+ kimia kedapannya) secara lengkap dan komperhensif sehingga murid tidak perlu buku paket dan catatan lagi',
   },
   {
     id: '2',
-    button: 'Kenapa membuat HarisLab ?',
+    button: 'Kenapa membuat Haris Lab ?',
     panel:
       "Saya sering mengajar les privat di Bintaro, dan sering sekali menemukan masalah-masalah siswa yaitu tidak punya catatan dan gurun sekolahnya mengajarkan materi hanya 'ketumplek' dari textbook tanpa tau apa yang sebenarnya terjadi pada dunia nyata, misal pelajaran fisika ttg objek yang bergerak, maka ilustrasinya harusnya bergerak juga, tapi itu tidak diajarkan di sekolah. Kita butuh visualisasi dari tulisan-tulisan soal-soal fisika. Kita ingin murid mengurangi waktu mencari materi pelajaran dan contoh soal, dan menggunakan waktu lebih banyak untuk memahaminya dan kalau bisa mengaplikasikannya dan me-recall nya ketika ilmunya belum terpakai atau untuk dipakai sewaktu-waktu.",
   },
@@ -137,31 +137,31 @@ export const matematikaChapterData = [
 
 export const WhatWhatYouCanDo = [
   {
-    title: 'Kalkulator',
-    svg: 'M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z',
-    to: '/kalkulator',
-    desc: 'Manfaatkan kalkulator dasar, kalkulator saintifik, dan kalkulator rumus demi kelancaran belajar.',
-    ResultOfTheAction: 'Calculate now',
-  },
-  {
-    title: 'Bimbel',
-    svg: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
-    to: '/bimbel',
-    desc: 'Ketika guru di sekolah tidak lagi bisa diandalkan, datanglah ke bimbel Haris Laboratory.',
-    ResultOfTheAction: 'Order tutor',
-  },
-  {
     title: 'Matematika',
     svg: 'M4.871 4A17.926 17.926 0 003 12c0 2.874.673 5.59 1.871 8m14.13 0a17.926 17.926 0 001.87-8c0-2.874-.673-5.59-1.87-8M9 9h1.246a1 1 0 01.961.725l1.586 5.55a1 1 0 00.961.725H15m1-7h-.08a2 2 0 00-1.519.698L9.6 15.302A2 2 0 018.08 16H8',
     to: '/matematika',
     desc: 'Mempelajari bahasa alam semesta yang digunakan di seluruh dunia untuk hampir segala hal.',
-    ResultOfTheAction: 'Explore Math',
+    ResultOfTheAction: 'Belajar Matematika',
   },
   {
     title: 'Fisika',
     svg: 'M13 10V3L4 14h7v7l9-11h-7z',
     to: '/fisika',
     desc: 'Mempelajari kegunaan dari matematika pada fenomena-fenomena fisik di seluruh alam semesta.',
-    ResultOfTheAction: 'Explore Physics',
+    ResultOfTheAction: 'Belajar Fisika',
+  },
+  {
+    title: 'Kalkulator',
+    svg: 'M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z',
+    to: '/kalkulator',
+    desc: 'Manfaatkan kalkulator dasar, kalkulator saintifik, dan kalkulator rumus demi kelancaran belajar.',
+    ResultOfTheAction: 'Gunakan Kalkulator',
+  },
+  {
+    title: 'Bimbel',
+    svg: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
+    to: '/bimbel',
+    desc: 'Ketika guru di sekolah tidak lagi bisa diandalkan, datanglah ke bimbel Haris Laboratory.',
+    ResultOfTheAction: 'Pesan Bimbel',
   },
 ];

@@ -1,9 +1,8 @@
 import Head from 'next/head';
 import Footer from './Footer';
-import NavDesktop from './GlobalNavigation';
-import NavMobile from './NavMobile';
+import GlobalNavigation from './GlobalNavigation';
 
-export default function Layout({
+export default function LayoutMateri({
   children,
   browserTitle,
   description,
@@ -19,6 +18,7 @@ export default function Layout({
       <Head>
         <title>Haris Lab</title>
         <link rel='icon' href='/logo.svg' />
+        <meta name='theme-color' content='#27272a' />
         <meta name='robots' content='follow, index' />
         <meta content={description} name='description' />
         <meta property='og:type' content={type} />
@@ -33,10 +33,7 @@ export default function Layout({
         <meta name='twitter:image' content={image} />
       </Head>
 
-      <section className='z-50 bg-zinc-50 sm:bg-opacity-90 border-b-2 border-zinc-300'>
-        <NavDesktop />
-        <NavMobile />
-      </section>
+      <GlobalNavigation />
 
       <main className='w-full max-w-5xl min-h-screen px-5 mx-auto sm:pb-0 xl:px-0 font-inter '>
         {children}

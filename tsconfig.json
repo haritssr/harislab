@@ -2,6 +2,8 @@
   "compilerOptions": {
     "target": "es5",
     "importHelpers": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
     "lib": [
       "dom",
       "dom.iterable",

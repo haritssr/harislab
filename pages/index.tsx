@@ -11,11 +11,12 @@ import {
 } from '../data/Beranda';
 import InfoBoxFitur from '@/components/InfoBoxFitur';
 import { InternalLink } from '@/components/DesignSystem';
+import CTABanner from '@/components/CTABanner';
 
 export default function Beranda() {
-  const BerandaTitle = 'mb-7 text-lg sm:text-4xl font-bold text-center  text-zinc-700 space-y-2 ';
-  const subBerandaTitle = 'text-base sm:text-2xl font-normal text-zinc-500';
-  const wrapper = 'mb-32 sm:mb-40';
+  const BerandaTitle = 'mb-7 text-lg sm:text-3xl font-bold text-center text-zinc-700 space-y-2 ';
+  const subBerandaTitle = 'text-base sm:text-xl font-normal text-zinc-500';
+  const wrapper = 'mt-20 mb-32 sm:mb-40';
   const sectionBox =
     'grid grid-cols-1 gap-5 mx-auto xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-5 xs:px-0';
   const tr = 'border-b border-zinc-600 divide-x divide-zinc-600';
@@ -24,7 +25,7 @@ export default function Beranda() {
 
   return (
     <Layout browserTitle='Beranda' description='Laboratorium untuk Pelajar.'>
-      <section className='flex flex-col items-center py-16 xs:py-28 text-left sm:w-2/3 mx-auto space-y-4'>
+      <section className='flex flex-col items-center py-16 xs:py-24 text-left sm:w-2/3 mx-auto space-y-4'>
         <div className='text-5xl text-zinc-800 font-semibold text-center'>
           Belajar matematika fisika online dan pesan bimbel
         </div>
@@ -34,23 +35,19 @@ export default function Beranda() {
         </div>
 
         {/* LINK KE BELAJAR DAN PESAN BIMBEL */}
-        <div className='flex items-center justify-center flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-10  w-full text-blue-500'>
+        <div className='flex items-center justify-center flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-5  w-full '>
           <Link href='/matematika'>
-            <a className='items-center flex w-auto cursor-pointer justify-center duration-300 ease-in-out'>
-              <div className='hover:underline text-lg font-medium'>Belajar online</div>
-              <RightArrowBlue />
+            <a className='text-lg rounded-md px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white p-1 w-full sm:w-1/3 text-center transform duration-200 hover:from-blue-500 hover:to-blue-600 '>
+              Mulai Belajar
             </a>
           </Link>
-          <Link href='/fisika'>
-            <a className='items-center flex w-auto cursor-pointer justify-center duration-300 ease-in-out'>
-              <div className='hover:underline text-lg font-medium'>Pesan bimbel</div>
-              <RightArrowBlue />
+          <Link href='/bimbel'>
+            <a className='text-lg rounded-md px-3 py-1.5 shadow hover:shadow-none border border-zinc-300 hover:bg-zinc-50 w-full sm:w-1/3 text-center text-blue-500'>
+              Pesan Bimbel
             </a>
           </Link>
         </div>
       </section>
-
-      <div className='w-full mx-auto mb-20 border-b border-zinc-100'></div>
 
       {/* Fitur */}
       <section id='fitur' className={wrapper}>
@@ -78,8 +75,6 @@ export default function Beranda() {
         </section>
       </section>
 
-      <div className='w-1/2 mx-auto mb-20 border-b border-zinc-100'></div>
-
       {/* Cara kami menyajikan informasi */}
       <section className={wrapper}>
         <div className={BerandaTitle}>
@@ -88,18 +83,10 @@ export default function Beranda() {
         </div>
         <section className={sectionBox}>
           {CaraSayaMenyampaikanInformasi.map(a => (
-            <InfoBox
-              key={a.id}
-              svg={a.svg}
-              name={a.title}
-              description={a.description}
-              to='/about'
-            />
+            <InfoBox key={a.id} svg={a.svg} name={a.title} description={a.description} />
           ))}
         </section>
       </section>
-
-      <div className='w-1/2 mx-auto mb-20 border-b border-zinc-100'></div>
 
       {/* Kami peduli tentang */}
       <section className={wrapper}>
@@ -112,18 +99,10 @@ export default function Beranda() {
 
         <section className={sectionBox}>
           {SayaPeduliTentang.map(a => (
-            <InfoBox
-              key={a.id}
-              svg={a.svg}
-              name={a.title}
-              description={a.description}
-              to='/about'
-            />
+            <InfoBox key={a.id} svg={a.svg} name={a.title} description={a.description} />
           ))}
         </section>
       </section>
-
-      <div className='w-1/2 mx-auto mb-20 border-b border-zinc-100'></div>
 
       {/* HarisLab vs Zenius vs Ruangguru vs Buku Paket*/}
       <section className={wrapper}>
@@ -194,50 +173,18 @@ export default function Beranda() {
           <div>Frequently asked questions</div>
           <div className={subBerandaTitle}>Pertanyaan-pertanyaan yang sering ditanyakan.</div>
         </div>
-        <section className='grid grid-cols-1 gap-5 xs:grid-cols-2'>
+        <section className='grid grid-cols-1 gap-3 max-w-xl mx-auto'>
           {isiFAQ.map(a => (
             <FAQ key={a.id} button={a.button} panel={a.panel} />
           ))}
         </section>
       </section>
 
-      {/* Try Haris Lab for free */}
-      <div className='flex flex-col items-center justify-center space-y-3'>
-        <div className='text-3xl font-bold text-center text-zinc-700'>Coba Haris Lab sekarang</div>
-        <div className='mx-auto text-xl text-center text-zinc-500 sm:w-1/2'>
-          Mulai gratis dan gunakan fitur advance ketika ketika level pelajaranmu meningkat.
-        </div>
-
-        <InternalLink name='Mulai belajar' to='/matematika' />
-      </div>
+      <CTABanner
+        title='Coba Haris Lab sekarang'
+        description='Mulai gratis dan gunakan fitur lanjutan ketika ketika level pelajaranmu meningkat.'
+        CTA='Mulai belajar sekarang'
+      />
     </Layout>
   );
 }
-
-const RightArrow = () => {
-  return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      className='w-5 h-5 pt-0.5 text-zinc-200 sm:pt-0 '
-      fill='none'
-      viewBox='0 0 24 24'
-      stroke='currentColor'
-    >
-      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
-    </svg>
-  );
-};
-
-const RightArrowBlue = () => {
-  return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      className='w-5 h-5 text-blue-500 group-hover:text-orange-600'
-      fill='none'
-      viewBox='0 0 24 24'
-      stroke='currentColor'
-    >
-      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2.5} d='M9 5l7 7-7 7' />
-    </svg>
-  );
-};

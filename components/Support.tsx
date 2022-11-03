@@ -9,7 +9,7 @@ export default function Support() {
       </div>
       <div className='grid grid-cols-1 gap-5 sm:grid-cols-3'>
         {/* Saweria */}
-        <div className='py-2 pl-4 pr-3 bg-white rounded-md shadow hover:shadow-md'>
+        <div className='py-2 pl-4 pr-3 bg-zinc-100 hover:zinc-200/60 border border-zinc-300 rounded-md hover:border-zinc-700'>
           <a
             href='https://www.saweria.co/harislab'
             target='_blank'
@@ -20,7 +20,7 @@ export default function Support() {
           </a>
         </div>
         {/* Trakteer */}
-        <div className='py-2 pl-4 pr-3 bg-white rounded-md shadow hover:shadow-md'>
+        <div className='py-2 pl-4 pr-3 bg-zinc-100 hover:zinc-200/60 border border-zinc-300 rounded-md hover:border-zinc-700'>
           <a
             href='https://trakteer.id/harits-syah/tip'
             target='_blank'
@@ -31,7 +31,7 @@ export default function Support() {
           </a>
         </div>
         {/* Nih Buat Jajan */}
-        <div className='py-2 pl-4 pr-3 bg-white rounded-md shadow hover:shadow-md'>
+        <div className='py-2 pl-4 pr-3 bg-zinc-100 hover:zinc-200/60 border border-zinc-300 rounded-md hover:border-zinc-700'>
           <a
             href='https://www.nihbuatjajan.com/harislab'
             target='_blank'

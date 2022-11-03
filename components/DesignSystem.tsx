@@ -24,6 +24,8 @@ const ArrowUpRight = () => {
   );
 };
 
+//Honestly, poorly designed, consider to delete this since the chapter page is not used anymore and repetitive
+//START
 export const AA1 = ({ title, id }: { title: string; id: string }) => {
   return (
     <h1 id={id} className={`mt-10 mb-1 text-xl font-semibold text-gray-700`}>
@@ -59,9 +61,7 @@ export const Gambar = ({ src, alt, caption }: { src: string; alt: string; captio
         priority
         className='bg-contain rounded-md'
       />
-      <figcaption className='text-sm italic text-center text-gray-700'>
-        {caption}
-      </figcaption>
+      <figcaption className='text-sm italic text-center text-gray-700'>{caption}</figcaption>
     </button>
   );
 };
@@ -98,9 +98,11 @@ export const Legenda = ({ name, rumus }: { name: string; rumus: string }) => {
     </button>
   );
 };
+
 export const KaTeX = ({ children }: { children: React.ReactNode }) => {
   return <TeX className='inline-block py-2 w-max'>{children}</TeX>;
 };
+
 export const Anchor = ({ to, name }: { to: string; name: string }) => {
   return (
     <Link href={to}>
@@ -125,24 +127,7 @@ export function TitleBack({ name, back }: { name: string; back: string }) {
     </div>
   );
 }
-
-export function TitleBackHome({ name }: { name: string }) {
-  return (
-    <div className='py-5'>
-      <Link href='/'>
-        <a>
-          <button className='flex flex-row items-center mb-5 -ml-4 -space-x-1 sm:-ml-5 sm:-space-x-0 group'>
-            <LeftArrowHome />
-            <div className='text-gray-500 group-hover:text-blue-600 '>Beranda</div>
-          </button>
-        </a>
-      </Link>
-      <h1 className='z-40 block w-full h-auto mx-auto text-3xl font-bold text-left text-gray-800 sm:text-4xl'>
-        {name}
-      </h1>
-    </div>
-  );
-}
+//END
 
 //Typography
 export function Title({ name }: { name: string }) {
@@ -173,7 +158,6 @@ export function ButtonPrimary({ name }: { name: string }) {
     </button>
   );
 }
-
 export function ButtonSecondary({ name }: { name: string }) {
   return (
     <button className='px-4 py-2 text-center duration-200 border rounded-md border-harislab text-harislab hover:bg-blue-50'>
@@ -181,7 +165,6 @@ export function ButtonSecondary({ name }: { name: string }) {
     </button>
   );
 }
-
 export function ButtonTertiary({ name }: { name: string }) {
   return (
     <button className='px-4 py-2 text-center duration-200 rounded-md hover:bg-blue-50 text-harislab '>
@@ -189,7 +172,6 @@ export function ButtonTertiary({ name }: { name: string }) {
     </button>
   );
 }
-
 export function InternalLink({ name, to }: { name: string; to: string }) {
   return (
     <Link href={to}>
@@ -206,6 +188,7 @@ export function ExternalLink({ name, to }: { name: string; to: string }) {
     <a
       href={to}
       target='_blank'
+      rel='noreferrer noopener'
       className='flex items-center cursor-pointer text-harislab hover:underline '
     >
       <div>{name}</div>
@@ -243,20 +226,6 @@ export const ChevronRight = () => {
 };
 
 const LeftArrow = () => {
-  return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      className='w-5 h-5 text-gray-500 group-hover:text-blue-600'
-      fill='none'
-      viewBox='0 0 24 24'
-      stroke='currentColor'
-    >
-      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={1.5} d='M15 19l-7-7 7-7' />
-    </svg>
-  );
-};
-
-const LeftArrowHome = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

@@ -1,8 +1,6 @@
 import 'katex/dist/katex.min.css';
 import TeX from '@matejmazur/react-katex';
-import ExampleMain from '@/components/ExampleMain';
 import PenurunanRumus from '@/components/PenurunanRumus';
-import ExampleChild from '@/components/ExampleChild';
 import LayoutMateri from '@/components/LayoutMateri';
 import { IntegralRumus } from 'data/RumusMatematika';
 import { IntegralPenurunanRumus } from 'data/PenurunanRumusMatematika';
@@ -89,12 +87,6 @@ export default function Integral() {
         libero. Error sequi ea assumenda, minus nobis cupiditate!
       </P>
       <br />
-      <ExampleMain type='Contoh Soal Mudah'>
-        <ExampleChild type='Teori Kinetik Gas'>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa consequatur qui optio
-          libero. Error sequi ea assumenda, minus nobis cupiditate!{' '}
-        </ExampleChild>
-      </ExampleMain>
     </LayoutMateri>
   );
 }

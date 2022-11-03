@@ -3,7 +3,7 @@ import Layout from '@/components/Layout';
 export default function SignUp() {
   return (
     <Layout browserTitle='Login' description='Halaman SignUp'>
-      <form className='w-full p-5 mx-auto mt-16 space-y-4 bg-white rounded-lg shadow-md max-w-xs'>
+      <form className='w-full p-5 mx-auto mt-16 space-y-4 bg-white rounded-lg shadow-md max-w-xs border border-zinc-300'>
         <h1 className='text-2xl font-semibold text-center text-zinc-800'>Daftar</h1>
         <section className='flex flex-col'>
           <label className='text-sm' htmlFor='nama'>
