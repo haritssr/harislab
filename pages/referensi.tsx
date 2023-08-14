@@ -1,6 +1,6 @@
 import LayoutGlobalNavigation from "@/components/LayoutGlobalNavigation";
 
-export default function Latihan() {
+export default function Referensi() {
   return (
     <LayoutGlobalNavigation
       browserTitle="Referensi"
