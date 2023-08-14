@@ -23,16 +23,18 @@ export default function List({
                 open ? '' : 'sm:rounded-b-md sm:drop-shadow-sm'
               } flex items-center justify-between w-full mx-auto bg-white border-b sm:border-b-[1.5px] sm:border-l-[1.5px] sm:border-r-[1.5px] border-gray-300 `}
             >
-              <Link href={`/${branch}`}>
-                <a className=' flex flex-row items-center w-1/4 px-3 py-2.5 text-tiny md:hidden'>
-                  <ChevronLeft />
-                </a>
+              <Link
+                href={`/${branch}`}
+                className=' flex flex-row items-center w-1/4 px-3 py-2.5 text-tiny md:hidden'
+              >
+                <ChevronLeft />
               </Link>
 
-              <Link href={`/${branch}/${to}`}>
-                <a className='block w-1/2 py-2.5 font-semibold text-center text-gray-800 sm:pl-5 sm:text-left text-tiny sm:text-lg md:w-1/6'>
-                  {title}
-                </a>
+              <Link
+                href={`/${branch}/${to}`}
+                className='block w-1/2 py-2.5 font-semibold text-center text-gray-800 sm:pl-5 sm:text-left text-tiny sm:text-lg md:w-1/6'
+              >
+                {title}
               </Link>
 
               <Menu.Button className='flex justify-end w-1/4 focus:outline-none md:w-5/6'>

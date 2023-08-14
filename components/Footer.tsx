@@ -9,43 +9,41 @@ export default function Footer() {
         <section className='hidden sm:block'>
           <section className='flex p-5 lg:p-0 space-x-10 sm:justify-end sm:space-x-14 '>
             <FooterBox title='Layanan'>
-              <Link href='/matematika'>
-                <a className={a}>Matematika</a>
+              <Link href='/matematika' className={a}>
+                Matematika
               </Link>
-              <Link href='/fisika'>
-                <a className={a}>Fisika</a>
+              <Link href='/fisika' className={a}>
+                Fisika
               </Link>
-              <Link href='/kalkulator'>
-                <a className={a}>Kalkulator</a>
+              <Link href='/kalkulator' className={a}>
+                Kalkulator
               </Link>
-              <Link href='/bimbel'>
-                <a className={a}>Bimbel</a>
+              <Link href='/bimbel' className={a}>
+                Bimbel
               </Link>
             </FooterBox>
             <FooterBox title='INFORMASI'>
-              <Link href='/pricing'>
-                <a className={a}>Pricing</a>
+              <Link href='/pricing' className={a}>
+                Pricing
               </Link>
-              <Link href='/privacy-policy'>
-                <a className={a}>Privacy Policy</a>
+              <Link href='/privacy-policy' className={a}>
+                Privacy Policy
               </Link>
-              <Link href='/terms-and-service'>
-                <a className={a}>Terms and Service</a>
+              <Link href='/terms-and-service' className={a}>
+                Terms and Service
               </Link>
-              <Link href='/sitemap'>
-                <a className={a}>Sitemap</a>
+              <Link href='/sitemap' className={a}>
+                Sitemap
               </Link>
             </FooterBox>
           </section>
         </section>
         <section className='p-0 sm:p-5 lg:p-0 sm:space-y-4 sm:w-1/3 flex sm:block items-center justify-between'>
-          <Link href='/'>
-            <a className='flex items-center space-x-2'>
-              <Logo />
-              <div className='font-semibold text-zinc-800 text-lg sm:text-xl -mt-[1.5px]'>
-                Haris Lab
-              </div>
-            </a>
+          <Link href='/' className='flex items-center space-x-2'>
+            <Logo />
+            <div className='font-semibold text-zinc-800 text-lg sm:text-xl -mt-[1.5px]'>
+              Haris Lab
+            </div>
           </Link>
           <div className='hidden sm:block'>
             <div className='text-zinc-700 text-xl mb-4'>
@@ -68,23 +66,23 @@ export default function Footer() {
             </div>
             <div className='block sm:hidden'>
               <div className='flex space-x-2 text-[12px]'>
-                <Link href='/privacy'>
-                  <a className={a}>Privacy</a>
+                <Link href='/privacy' className={a}>
+                  Privacy
                 </Link>
-                <Link href='/terms'>
-                  <a className={a}>Terms</a>
+                <Link href='/terms' className={a}>
+                  Terms
                 </Link>
-                <Link href='/sitemap'>
-                  <a className={a}>Sitemap</a>
+                <Link href='/sitemap' className={a}>
+                  Sitemap
                 </Link>
-                <Link href='/about'>
-                  <a className={a}>About</a>
+                <Link href='/about' className={a}>
+                  About
                 </Link>
               </div>
             </div>
           </div>
-          <Link href='/about-us'>
-            <a className='inline-block sm:hidden text-blue-600'>More Info</a>
+          <Link href='/about-us' className='inline-block sm:hidden text-blue-600'>
+            More Info
           </Link>
         </section>
       </section>

@@ -22,21 +22,19 @@ const IconWrapper = ({ to, path }: { to: string; path: React.ReactNode }) => {
   }
 
   return (
-    <Link href={`${to === '/home' ? '/' : to}`}>
-      <a className='block w-1/5'>
-        <div className='flex flex-col items-center justify-center py-1'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            className={`h-6 w-6 ${color}`}
-            viewBox='0 0 20 20'
-            fill='currentColor'
-          >
-            {path}
-          </svg>
+    <Link href={`${to === '/home' ? '/' : to}`} className='block w-1/5'>
+      <div className='flex flex-col items-center justify-center py-1'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          className={`h-6 w-6 ${color}`}
+          viewBox='0 0 20 20'
+          fill='currentColor'
+        >
+          {path}
+        </svg>
 
-          <div className={`text-[10px] -mt-[2px] ${color}`}>{capitalizeFirstLetter(to)}</div>
-        </div>
-      </a>
+        <div className={`text-[10px] -mt-[2px] ${color}`}>{capitalizeFirstLetter(to)}</div>
+      </div>
     </Link>
   );
 };

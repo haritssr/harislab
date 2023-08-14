@@ -3,12 +3,8 @@ import GlobalNavigation from './GlobalNavigation';
 import { useRouter } from 'next/router';
 import Footer from './Footer';
 import GlobalNavigationMobile from './GlobalNavigationMobile';
-import { useEffect, useRef, useState } from 'react';
-import { Listbox } from '@headlessui/react';
-import { CheckIcon } from '@heroicons/react/outline';
 
-import { CalculatorIcon, UserCircleIcon } from '@heroicons/react/outline';
-import Tools, { ToolsLight } from './Tools';
+import { ToolsLight } from './Tools';
 
 interface LayoutType {
   children: React.ReactNode;
@@ -68,40 +64,6 @@ export default function LayoutGlobalNavigation({
 
       <Footer />
       <GlobalNavigationMobile />
-    </div>
-  );
-}
-
-function Sort() {
-  const people = [
-    { id: 1, name: 'Domain' },
-    { id: 2, name: 'Kelas' },
-  ];
-  const [selectedPerson, setSelectedPerson] = useState(people[0]);
-
-  return (
-    <div className='flex justify-end items-center '>
-      <Listbox value={selectedPerson} onChange={setSelectedPerson} as='div' className='relative'>
-        <Listbox.Button className='text-blue-600 hover:text-blue-400 text-right w-[125px]'>
-          Sort
-        </Listbox.Button>
-        <Listbox.Options className='absolute mt-1 w-full overflow-hidden  bg-white/10 backdrop-blur rounded-md shadow-xl divide-y divide-zinc-400 border'>
-          {people.map(person => (
-            <Listbox.Option
-              key={person.id}
-              value={person}
-              className='px-2 py-1 flex items-center space-x-2 cursor-pointer hover:bg-zinc-50'
-            >
-              {({ selected }) => (
-                <>
-                  <CheckIcon className={`w-5 h-5 ${selected ? 'text-zinc-800' : 'text-white'}`} />
-                  <div>{person.name}</div>
-                </>
-              )}
-            </Listbox.Option>
-          ))}
-        </Listbox.Options>
-      </Listbox>
     </div>
   );
 }

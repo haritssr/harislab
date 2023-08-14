@@ -32,13 +32,19 @@
         "components/showcase"
       ]
     },
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "tailwind.config.js"
+    "tailwind.config.js",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

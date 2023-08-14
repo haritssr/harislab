@@ -10,7 +10,6 @@ import {
   WhatWhatYouCanDo,
 } from '../data/Beranda';
 import InfoBoxFitur from '@/components/InfoBoxFitur';
-import { InternalLink } from '@/components/DesignSystem';
 import CTABanner from '@/components/CTABanner';
 
 export default function Beranda() {
@@ -36,15 +35,17 @@ export default function Beranda() {
 
         {/* LINK KE BELAJAR DAN PESAN BIMBEL */}
         <div className='flex items-center justify-center flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-5  w-full '>
-          <Link href='/matematika'>
-            <a className='text-lg rounded-md px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white p-1 w-full sm:w-1/3 text-center transform duration-200 hover:from-blue-500 hover:to-blue-600 '>
-              Mulai Belajar
-            </a>
+          <Link
+            href='/matematika'
+            className='text-lg rounded-md px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white p-1 w-full sm:w-1/3 text-center transform duration-200 hover:from-blue-500 hover:to-blue-600 '
+          >
+            Mulai Belajar
           </Link>
-          <Link href='/bimbel'>
-            <a className='text-lg rounded-md px-3 py-1.5 shadow hover:shadow-none border border-zinc-300 hover:bg-zinc-50 w-full sm:w-1/3 text-center text-blue-500'>
-              Pesan Bimbel
-            </a>
+          <Link
+            href='/bimbel'
+            className='text-lg rounded-md px-3 py-1.5 shadow hover:shadow-none border border-zinc-300 hover:bg-zinc-50 w-full sm:w-1/3 text-center text-blue-500'
+          >
+            Pesan Bimbel
           </Link>
         </div>
       </section>

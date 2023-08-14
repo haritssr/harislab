@@ -15,10 +15,11 @@ export default function CTABanner({
         {title}
       </div>
       <div className='text-zinc-600 text-lg text-center px-5 sm:px-0'>{description}</div>
-      <Link href='/bimbel'>
-        <a className='rounded-md text-lg bg-gradient-to-b bg-blue-600 hover:bg-blue-700 cursor-pointer w-fit text-white px-4 py-2 text-center transform duration-200'>
-          {CTA}
-        </a>
+      <Link
+        href='/bimbel'
+        className='rounded-md text-lg bg-gradient-to-b bg-blue-600 hover:bg-blue-700 cursor-pointer w-fit text-white px-4 py-2 text-center transform duration-200'
+      >
+        {CTA}
       </Link>
     </div>
   );
