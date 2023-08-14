@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import GlobalNavigationMobile from "./GlobalNavigationMobile";
 
 import { ToolsLight } from "./Tools";
+import React from "react";
 
 interface LayoutType {
   children: React.ReactNode;

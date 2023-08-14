@@ -1,16 +1,7 @@
-import Layout from "@/components/Layout";
-import {
-  Title,
-  InternalLink,
-  Topic,
-  TitleBack,
-} from "@/components/DesignSystem";
 import { Tab } from "@headlessui/react";
 import LayoutGlobalNavigation from "@/components/LayoutGlobalNavigation";
 
 export default function Kalkulator() {
-  const tab =
-    "active:bg-zinc-200 rounded-md text-tiny hover:bg-white hover:shadow-md py-2 px-4";
   return (
     <LayoutGlobalNavigation
       browserTitle="Kalkulator"

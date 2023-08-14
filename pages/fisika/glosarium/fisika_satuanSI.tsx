@@ -1,17 +1,24 @@
-import 'katex/dist/katex.min.css';
-import TeX from '@matejmazur/react-katex';
-import Layout from '@/components/Layout';
-import { Title, SubTitle, TitleBack } from '@/components/DesignSystem';
-import { GlosariumVar } from 'data/VariabelFisika';
-import { GlosariumKonstanta } from 'data/KonstantaFisika';
-import { AA1, TH, TData, Row, THEAD, Body, KaTeX } from '@/components/DesignSystem';
+import "katex/dist/katex.min.css";
+import Layout from "@/components/Layout";
+import {
+  TH,
+  TData,
+  Row,
+  THEAD,
+  Body,
+  KaTeX,
+  TitleBack,
+} from "@/components/DesignSystem";
 
 export default function satuanSI() {
   return (
-    <Layout browserTitle='Satuan Sistem Internasional' description='Satuan Sistem Internasional'>
-      <TitleBack back='Fisika' name='Sistem Satuan Internasional' />
-      <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
-        <table className='w-full min-w-full border table-max'>
+    <Layout
+      browserTitle="Satuan Sistem Internasional"
+      description="Satuan Sistem Internasional"
+    >
+      <TitleBack back="Fisika" name="Sistem Satuan Internasional" />
+      <section className="mx-auto overflow-x-auto sm:gap-5 lg:px-0">
+        <table className="w-full min-w-full border table-max">
           <THEAD>
             <Row>
               <TH>Nama Satuan</TH>

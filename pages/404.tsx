@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import Link from "next/link";
-import { InternalLink } from "@/components/DesignSystem";
 import { ChevronLeftIcon } from "@heroicons/react/outline";
 
 export default function HalamanTidakDitemukan() {

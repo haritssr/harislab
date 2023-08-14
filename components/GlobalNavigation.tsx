@@ -50,23 +50,6 @@ export default function GlobalNavigation() {
   );
 }
 
-const NavDesktopLink = ({ href, title }: { href: string; title: string }) => {
-  const router = useRouter();
-  return (
-    <Link
-      href={href}
-      className={`${
-        // router.asPath.substring(0, href.length) === /experiments or /blog ,etc
-        router.asPath.substring(0, href.length) === href
-          ? "text-black"
-          : "text-zinc-700"
-      } py-0.5 px-2.5 hover:bg-zinc-100 rounded-md border border-white hover:border-zinc-100`}
-    >
-      {title}
-    </Link>
-  );
-};
-
 const links = ["referensi", "analisis", "tes", "bimbel"];
 
 function Destination({ link }: { link: string }) {

@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Header from "./Header";
 import GlobalNavigation from "./GlobalNavigation";
 import GlobalNavigationMobile from "./GlobalNavigationMobile";
+import React from "react";
 
 interface LayoutType {
   children: React.ReactNode;

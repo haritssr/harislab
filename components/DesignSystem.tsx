@@ -111,7 +111,7 @@ export const Legenda = ({ name, rumus }: { name: string; rumus: string }) => {
   );
 };
 
-export const KaTeX = ({ children }: { children: React.ReactNode }) => {
+export const KaTeX = ({ children }: { children: String }) => {
   return <TeX className="inline-block py-2 w-max">{children}</TeX>;
 };
 
