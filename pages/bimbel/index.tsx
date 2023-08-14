@@ -1,13 +1,14 @@
-import LayoutGlobalNavigation from '@/components/LayoutGlobalNavigation';
+import CurrentStatus from "@/components/CurrentStatus";
+import LayoutGlobalNavigation from "@/components/LayoutGlobalNavigation";
 
 export default function Bimbel() {
   return (
     <LayoutGlobalNavigation
-      globalNavigationTitle='Bimbel'
-      browserTitle='Bimbel'
-      description='Bimbel'
+      browserTitle="Bimbel"
+      description="Bimbel"
+      globalNavigationTitle="Bimbel"
     >
-      <div className=''>Coming soon</div>
+      <CurrentStatus currentStatus="Ideation" />
     </LayoutGlobalNavigation>
   );
 }

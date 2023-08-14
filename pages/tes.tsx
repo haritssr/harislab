@@ -1,13 +1,14 @@
+import CurrentStatus from "@/components/CurrentStatus";
 import LayoutGlobalNavigation from "@/components/LayoutGlobalNavigation";
 
-export default function Latihan() {
+export default function Tes() {
   return (
     <LayoutGlobalNavigation
       browserTitle="Tes"
-      description=""
+      description="Tes"
       globalNavigationTitle="Tes"
     >
-      <div className=""></div>
+      <CurrentStatus currentStatus="Ideation" />
     </LayoutGlobalNavigation>
   );
 }
