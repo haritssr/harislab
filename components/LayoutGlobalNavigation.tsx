@@ -58,7 +58,6 @@ export default function LayoutGlobalNavigation({
           <ToolsLight />
         </section>
       </div>
-      {/* <div className='text-4xl font-bold text-zinc-800 max-w-4xl px-3 xl:px-0 mx-auto py-4'>{globalNavigationTitle}</div> */}
 
       <main className="mx-auto min-h-screen w-full max-w-5xl px-3 pb-5 sm:pb-0 xl:px-0">
         {children}
