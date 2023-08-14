@@ -4,7 +4,7 @@ export default function Referensi() {
   return (
     <LayoutGlobalNavigation
       browserTitle="Referensi"
-      description=""
+      description="Referensi"
       globalNavigationTitle="Referensi"
     >
       <div className=""></div>
