@@ -6,12 +6,12 @@
 
 export const DataMatematika = [
   {
-    domain: 'ARITMATIKA',
+    domain: 'Aritmatika',
     chapters: [
       {
         title: 'Angka & Bilangan',
         contents: [
-          'Pengantar Angka & Bilangan',
+          'Pengantar',
           'Bilangan Cacah',
           'Bilangan Bulat',
           'Bilangan Real',
@@ -20,29 +20,29 @@ export const DataMatematika = [
       },
       {
         title: 'Fungsi',
-        contents: ['Pengantar Fungsi', 'angka 1', 'angkar 2'],
+        contents: ['Pengantar', 'angka 1', 'angkar 2'],
       },
       {
         title: 'Matriks',
-        contents: ['Pengantar Matriks', 'Operasi Matriks', 'Determinan Matriks', 'Inverse Matriks'],
+        contents: ['Pengantar', 'Operasi Matriks', 'Determinan Matriks', 'Inverse Matriks'],
       },
       {
         title: 'Barisan',
-        contents: ['Pengantar Barisan', 'Barisan Aritmatika', 'Barisan Geometri'],
+        contents: ['Pengantar', 'Barisan Aritmatika', 'Barisan Geometri'],
       },
       {
         title: 'Deret',
-        contents: ['Pengantar Deret', 'Deret Aritmatika', 'Deret Geometri'],
+        contents: ['Pengantar', 'Deret Aritmatika', 'Deret Geometri'],
       },
     ],
   },
   {
-    domain: 'LINEAR',
+    domain: 'Garis',
     chapters: [
       {
-        title: 'Persamaan Linear',
+        title: 'Persamaan Garis',
         contents: [
-          'Pengantar Persamaan Linear',
+          'Pengantar',
           'Penambahan',
           'Pengurangan',
           'Perkalian',
@@ -54,20 +54,20 @@ export const DataMatematika = [
       },
       {
         title: 'Pertidaksamaan Linear',
-        contents: ['Pengantar Program Linear', 'Model Matematika'],
+        contents: ['Pengantar', 'Model Matematika'],
       },
       {
         title: 'Program Linear',
-        contents: ['Pengantar Program Linear', 'Model Matematika'],
+        contents: ['Pengantar', 'Model Matematika'],
       },
     ],
   },
   {
-    domain: 'PANGKAT',
+    domain: 'Pangkat',
     chapters: [
       {
         title: 'Eksponen',
-        contents: ['Pengantar Eksponen', 'Rumus Eksponens'],
+        contents: ['Pengantar', 'Rumus Eksponens'],
       },
       {
         title: 'Logaritma',
@@ -75,21 +75,21 @@ export const DataMatematika = [
       },
       {
         title: 'Kuadrat',
-        contents: ['Pengantar Kuadrat', 'Persamaan Kuadrat', 'Pertidaksamaan Kuadrat'],
+        contents: ['Pengantar', 'Persamaan Kuadrat', 'Pertidaksamaan Kuadrat'],
       },
       {
-        title: 'Polinomial (Suku Banyak)',
-        contents: ['Pengantar Polinomial', 'Penambahan', 'Pengurangan', 'Perkalian', 'Pembagian'],
+        title: 'Suku Banyak',
+        contents: ['Pengantar', 'Penambahan', 'Pengurangan', 'Perkalian', 'Pembagian'],
       },
     ],
   },
   {
-    domain: 'GEOMETRI',
+    domain: 'Geometri',
     chapters: [
       {
         title: 'Bangun Datar',
         contents: [
-          'Pengantar Bangun Datar',
+          'Pengantar',
           'Lingkaran',
           'Persegi',
           'Segitita',
@@ -100,14 +100,14 @@ export const DataMatematika = [
       },
       {
         title: 'Bangun Ruang',
-        contents: ['Pengantar Bangun Ruang', 'Kubus', 'Bola', 'Balok', 'Prisma', 'Limas'],
+        contents: ['Pengantar', 'Kubus', 'Bola', 'Balok', 'Prisma', 'Limas'],
       },
-      { title: 'Vektor', contents: ['Pengantar Vektor', 'Penjumlahan sudut', 'Perkalian sudut'] },
-      { title: 'Sudut', contents: ['Pengantar Sudut', 'Penjumlahan sudut', 'Perkalian sudut'] },
+      { title: 'Vektor', contents: ['Pengantar', 'Penjumlahan sudut', 'Perkalian sudut'] },
+      { title: 'Sudut', contents: ['Pengantar', 'Penjumlahan sudut', 'Perkalian sudut'] },
       {
         title: 'Trigonometri',
         contents: [
-          'Pengantar Trigonometri',
+          'Pengantar',
           'Aturan Sinus',
           'Aturan Cosinus',
           'Aturan Tangen',
@@ -120,44 +120,38 @@ export const DataMatematika = [
       },
       {
         title: 'Tranformasi Geometri',
-        contents: [
-          'Pengantar Transformasi Geometri',
-          'Refleksi',
-          'Dilatasi',
-          'Rotasi',
-          'Translasi',
-        ],
+        contents: ['Pengantar', 'Refleksi', 'Dilatasi', 'Rotasi', 'Translasi'],
       },
     ],
   },
   {
-    domain: 'KALKULUS',
+    domain: 'Kalkulus',
     chapters: [
       {
         title: 'Limit',
-        contents: ['Pengantar Limit', 'Limit aljabar', 'Limit Trigonometri', 'Limit Tak Hingga'],
+        contents: ['Pengantar', 'Limit Aljabar', 'Limit Trigonometri', 'Limit Tak Hingga'],
       },
       {
         title: 'Turunan',
-        contents: ['Pengantar Turunan', 'Turunan Aljabar', 'Turunan Trigonometri'],
+        contents: ['Pengantar', 'Turunan Aljabar', 'Turunan Trigonometri'],
       },
       {
         title: 'Integral',
-        contents: ['Pengantar Integral', 'Integral tak tentu', 'Integral tentu'],
+        contents: ['Pengantar', 'Integral Tak Tentu', 'Integral Tentu'],
       },
     ],
   },
   {
-    domain: 'STATISTIK',
+    domain: 'Statistika',
     chapters: [
       {
         title: 'Statistika Deskriptif',
-        contents: ['Pengantar Statistika Deskriptif', 'Grafik', 'Mean', 'Modus', 'Median'],
+        contents: ['Pengantar', 'Grafik', 'Mean', 'Modus', 'Median'],
       },
       {
         title: 'Statistika Inferensial',
         contents: [
-          'Pengantar Statistika Inferensial',
+          'Pengantar',
           'Sampling',
           'Nilai dan Frekuensi Harapan',
           'Distribusi Binomial',
@@ -168,14 +162,14 @@ export const DataMatematika = [
     ],
   },
   {
-    domain: 'PELUANG',
+    domain: 'Peluang',
     chapters: [
       {
         title: 'Peluang',
-        contents: ['Pengantar Peluang'],
+        contents: ['Pengantar'],
       },
-      { title: 'Permutasi', contents: ['Pengantar Permutasi'] },
-      { title: 'Kombinasi', contents: ['Pengantar Kombinasi'] },
+      { title: 'Permutasi', contents: ['Pengantar'] },
+      { title: 'Kombinasi', contents: ['Pengantar'] },
     ],
   },
 ];

@@ -1,7 +1,15 @@
-module.exports = {
-  eslint: {
-    // Warning: Dangerously allow production builds to successfully complete even if
-    // your project has ESLint errors.
-    ignoreDuringBuilds: true,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: false, // Recommended for the `pages` directory, default in `app`.
+  swcMinify: true,
+  experimental: {
+    // Required:
+    appDir: true,
   },
+  extends: [
+    //...
+    'plugin:@next/next/recommended',
+  ],
 };
+
+module.exports = nextConfig;

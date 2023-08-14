@@ -1,49 +1,83 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Account, Logo } from './Icons';
-import SearchMenu from './SearchMenu';
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { Logo } from "./Icons";
+import Pencarian from "./GlobalTools/Pencarian";
+import Kalkulator from "./GlobalTools/Kalkulator";
+import Statistik from "./GlobalTools/Statistik";
+import Profil from "./GlobalTools/Profil";
 
 export default function GlobalNavigation() {
   return (
-    <nav className='z-40 bg-zinc-800'>
-      <div className=' flex items-center justify-between h-auto w-full max-w-5xl py-2.5 mx-auto px-3 xl:px-0'>
-        <Link href='/'>
-          <a className='w-1/2 sm:w-1/6  pt-[1px] space-x-1.5 flex items-center'>
+    <>
+      <nav className="z-40 sticky top-0 bg-white border-b border-zinc-300 items-center flex ">
+        <div className="flex items-center justify-between w-full max-w-5xl py-2 mx-auto px-3 sm:px-5 xl:px-0  ">
+          <Link
+            href="/"
+            className="w-1/2 sm:w-1/6  space-x-1.5 flex items-center"
+          >
             <Logo />
-            <div className='text-zinc-50 font-inter font-medium'>Haris Lab</div>
-          </a>
-        </Link>
+            <div className="text-zinc-800 font-inter font-semibold -mb-[1.3px]">
+              Haris Lab
+            </div>
+          </Link>
+          {/* <div className="hidden sm:block sm:w-4/6">
+            <div className="flex sm:space-x-2 items-center sm:justify-start xl:justify-center">
+              <NavDesktopLink href="/" title="Beranda" />
+              <NavDesktopLink href="/fisika" title="Referensi" />
+              <NavDesktopLink href="/analisis" title="Analisis" />
+              <NavDesktopLink href="/latihan-soal" title="Latihan" />
+              <NavDesktopLink href="/bimbel" title="Bimbel" />
+            </div>
+          </div> */}
 
-        <div className='hidden sm:block sm:w-4/6'>
-          <div className='flex md:space-x-6 items-center justify-center '>
-            <NavDesktopLink href='/kalkulator' title='Kalkulator' />
-            <NavDesktopLink href='/matematika' title='Matematika' />
-            <NavDesktopLink href='/fisika' title='Fisika' />
-            <NavDesktopLink href='/bimbel' title='Bimbel' />
+          <div className="hidden sm:block sm:w-4/6">
+            <ul className="flex space-x-10 justify-center">
+              {links.map((link) => {
+                return <Destination key={link} link={link} />;
+              })}
+            </ul>
+          </div>
+
+          <div className="items-center flex space-x-2 sm:w-1/6 justify-end">
+            <Pencarian />
+            <Kalkulator />
+            <Statistik />
+            <Profil />
           </div>
         </div>
-
-        <div className='items-center flex space-x-5 sm:space-x-3 sm:w-1/6 justify-end'>
-          {/* <MobileMenu /> */}
-          <SearchMenu />
-          <Account />
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 }
 
-const NavDesktopLink = ({ href, title }: { href: string; title: string }) => {
+const links = ["referensi", "analisis", "tes", "bimbel"];
+
+function Destination({ link }: { link: string }) {
   const router = useRouter();
+
+  function capitalizeFirstLetter(to: string) {
+    if (link === "cv") {
+      return "CV";
+    } else {
+      return to.substring(0).charAt(0).toUpperCase() + to.slice(1);
+    }
+  }
+
+  let color: string;
+
+  if (router.asPath === `/${link}`) {
+    color = "text-blue-700";
+  } else {
+    color = "text-zinc-600 hover:text-zinc-800";
+  }
   return (
-    <Link href={href}>
-      <a
-        className={`px-3 rounded block ${
-          router.asPath === href ? 'text-zinc-50' : 'text-zinc-400 hover:text-zinc-50'
-        }`}
+    <li>
+      <Link
+        className={`${color} text-[15px] leading-[24px]`}
+        href={`${link === "home" ? "/" : link}`}
       >
-        {title}
-      </a>
-    </Link>
+        {capitalizeFirstLetter(link)}
+      </Link>
+    </li>
   );
-};
+}

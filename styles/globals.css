@@ -1,11 +1,17 @@
-.incorrect {
-  color: red;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+@layer variansts {
+  .bg-translucent {
+    @apply bg-[#F0EFF6]/50 backdrop-blur-md saturate-150;
+  }
+}
+
+.incorrect {
+  color: red;
+}
 
 html {
   scroll-behavior: auto;
@@ -25,32 +31,6 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-.blur {
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(255, 255, 255, 1);
-}
-
-#myBtn:hover {
-  background-color: #555;
-}
-
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
 }
 
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -94,15 +74,4 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.adaptive-glass {
-  --glass-lightness: 100%;
-  background: hsl(0 0% var(--glass-lightness) / 50%);
-  backdrop-filter: blur(40px);
-}
-
-.harislab-underline {
-  text-decoration: underline;
-  text-decoration-color: white;
 }

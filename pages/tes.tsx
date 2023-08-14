@@ -1,12 +1,12 @@
 import CurrentStatus from "@/components/CurrentStatus";
 import LayoutGlobalNavigation from "@/components/LayoutGlobalNavigation";
 
-export default function Bimbel() {
+export default function Tes() {
   return (
     <LayoutGlobalNavigation
-      browserTitle="Bimbel"
-      description="Bimbel"
-      globalNavigationTitle="Bimbel"
+      browserTitle="Tes"
+      description="Tes"
+      globalNavigationTitle="Tes"
     >
       <CurrentStatus currentStatus="Ideation" />
     </LayoutGlobalNavigation>

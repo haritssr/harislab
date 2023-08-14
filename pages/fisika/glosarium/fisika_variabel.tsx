@@ -1,14 +1,22 @@
-import 'katex/dist/katex.min.css';
-import Layout from '@/components/Layout';
-import { GlosariumVar } from 'data/VariabelFisika';
-import { AA1, TH, TData, Row, THEAD, Body, KaTeX, Title, TitleBack } from '@/components/DesignSystem';
+import "katex/dist/katex.min.css";
+import Layout from "@/components/Layout";
+import { GlosariumVar } from "data/VariabelFisika";
+import {
+  TH,
+  TData,
+  Row,
+  THEAD,
+  Body,
+  KaTeX,
+  TitleBack,
+} from "@/components/DesignSystem";
 
 export default function fisikaVariabel() {
   return (
-    <Layout browserTitle='Variabel Fisika' description='Variabel Fisika'>
-      <TitleBack back='Fisika' name='Variabel Fisika' />
-      <section className='mx-auto overflow-x-auto sm:gap-5 lg:px-0'>
-        <table className='w-full min-w-full border table-max'>
+    <Layout browserTitle="Variabel Fisika" description="Variabel Fisika">
+      <TitleBack back="Fisika" name="Variabel Fisika" />
+      <section className="mx-auto overflow-x-auto sm:gap-5 lg:px-0">
+        <table className="w-full min-w-full border table-max">
           <THEAD>
             <Row>
               <TH>Simbol</TH>
@@ -18,7 +26,7 @@ export default function fisikaVariabel() {
           </THEAD>
 
           <Body>
-            {GlosariumVar.map(a => (
+            {GlosariumVar.map((a) => (
               <Row key={a.satuan}>
                 <TData>
                   <KaTeX>{String.raw`${a.simbol}`}</KaTeX>
