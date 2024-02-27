@@ -1,0 +1,31 @@
+<TemplateGrid>
+			<aside className="col-span-1 border border-l border-b border-r hidden lg:block">
+				<div className="p-3 space-y-2">
+					<LeftBarLink href="/analisis/new" title="Analisis Baru" icon={<PlusIcon className="w-[18px] h-[18px]" />} />
+					<LeftBarLink href="/analisis/list" title="Daftar Analisis" icon={<ListBulletIcon className="w-[18px] h-[18px]" />} />
+				</div>
+			</aside>
+			<div className="col-span-1 lg:col-span-4">{children}</div>
+			<aside className="col-span-1 border-b border-l border-r hidden lg:block">
+				<div className="h-10 border-b Other"></div>
+			</aside>
+		</TemplateGrid>
+
+
+
+LeftBarLink
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+export default function LeftBarLink({ href, title, icon }: { href: string; title: string; icon: React.ReactElement }) {
+	const pathname = usePathname();
+	const color = pathname === href ? "bg-blue-600 text-white" : "hover:bg-zinc-100";
+	return (
+		<Link className={`${color} space-x-2 px-2 py-1 rounded-md flex items-center`} href={href}>
+			<div>{icon}</div>
+			<div>{title}</div>
+		</Link>
+	);
+}
