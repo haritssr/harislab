@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { GeistSans } from "geist/font/sans";
 import GlobalNavigationFirst from "@/components/GlobalNavigationFirst";
 import Footer from "@/components/Footer";
 import GlobalNavigationMobile from "@/components/GlobalNavigationMobile";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Haris Lab",
@@ -18,8 +20,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body className={`${GeistSans.className} `}>
+		<html lang="en" className={inter.className}>
+			<body>
 				<GlobalNavigationFirst />
 				<main className="mx-auto min-h-screen px-3 xl:p-0 max-w-3xl">
 					{children}
