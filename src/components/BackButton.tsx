@@ -9,10 +9,10 @@ export default function BackButton({
 		<Link passHref href={href}>
 			<span className="group flex items-center">
 				<ChevronLeftIcon
-					className="-ml-2 h-[18px] w-[18px] text-blue-600 sm:group-hover:text-blue-400"
+					className="-ml-2 h-4 sm:h-[18px] w-4 sm:w-[18px] text-blue-600 sm:group-hover:text-blue-400"
 					strokeWidth={2}
 				/>
-				<span className="-ml-0.5 block truncate text-blue-600 sm:group-hover:text-blue-400 hover:underline">
+				<span className="-ml-0.5 block truncate text-blue-600 sm:group-hover:text-blue-400 hover:underline text-[14px] sm:text-base">
 					{title}
 				</span>
 			</span>
