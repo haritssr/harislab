@@ -8,7 +8,8 @@ import GlobalNavigationMobile from "@/components/GlobalNavigationMobile";
 
 export const metadata: Metadata = {
 	title: "Haris Lab",
-	description: "Tempat pengelolaan matematika dan fisika tingkat sekolah menengah.",
+	description:
+		"Tempat pengelolaan matematika dan fisika tingkat sekolah menengah.",
 };
 
 export default function RootLayout({
@@ -20,7 +21,9 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={`${GeistSans.className} `}>
 				<GlobalNavigationFirst />
-				<main className="mx-auto min-h-screen px-3 xl:p-0 max-w-3xl">{children}</main>
+				<main className="mx-auto min-h-screen px-3 xl:p-0 max-w-3xl">
+					{children}
+				</main>
 				<Footer />
 				<GlobalNavigationMobile />
 			</body>

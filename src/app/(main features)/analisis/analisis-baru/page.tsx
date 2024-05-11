@@ -24,5 +24,5 @@ export default function Page() {
 }
 
 function Spanner() {
-	return <div className="ml-6 h-4 w-2 bg-zinc-300"></div>;
+	return <div className="ml-6 h-4 w-2 bg-zinc-300" />;
 }

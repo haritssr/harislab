@@ -14,7 +14,7 @@ export default function Home() {
 	return (
 		<main>
 			<Definition />
-			<div className="border-b my-10"></div>
+			<div className="border-b my-10" />
 			<Features />
 		</main>
 	);
@@ -25,11 +25,15 @@ function Definition() {
 		<section className="space-y-5 mt-14">
 			<div className="w-full flex justify-center">
 				<h1 className="text-2xl sm:text-4xl font-semibold text-zinc-800 text-center max-w-3xl">
-					Tempat Belajar dan Managemen Matematika Fisika Tingkat Sekolah Menengah.
+					Tempat Belajar dan Managemen Matematika Fisika Tingkat Sekolah
+					Menengah.
 				</h1>
 			</div>
 			<div className="flex items-center space-x-4 w-full justify-center ">
-				<Link className="rounded-md px-4 py-1.5 text-white font-medium bg-blue-600 hover:bg-blue-700" href="/analisis">
+				<Link
+					className="rounded-md px-4 py-1.5 text-white font-medium bg-blue-600 hover:bg-blue-700"
+					href="/analisis"
+				>
 					Analisis Soal
 				</Link>
 				<Link
@@ -48,24 +52,64 @@ function Features() {
 	return (
 		<div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
 			<section className="space-y-3">
-				<h2 className="text-lg text-zinc-500 text-center sm:text-left">Fitur Utama</h2>
-				<FeatureLink logo={<BookOpenIcon className={IconStyle} />} title="Referensi" description="Sumber informasi pelajaran" />
-				<FeatureLink logo={<ScaleIcon className={IconStyle} />} title="Analisis" description="Managemen pengerjaan soal" />
-				<FeatureLink logo={<ClipboardDocumentListIcon className={IconStyle} />} title="Tes" description="Mengerjakan tes soal" />
-				<FeatureLink logo={<AcademicCapIcon className={IconStyle} />} title="Bimbel" description="Bimbingan belajar ke rumah" />
+				<h2 className="text-lg text-zinc-500 text-center sm:text-left">
+					Fitur Utama
+				</h2>
+				<FeatureLink
+					logo={<BookOpenIcon className={IconStyle} />}
+					title="Referensi"
+					description="Sumber informasi pelajaran"
+				/>
+				<FeatureLink
+					logo={<ScaleIcon className={IconStyle} />}
+					title="Analisis"
+					description="Managemen pengerjaan soal"
+				/>
+				<FeatureLink
+					logo={<ClipboardDocumentListIcon className={IconStyle} />}
+					title="Tes"
+					description="Mengerjakan tes soal"
+				/>
+				<FeatureLink
+					logo={<AcademicCapIcon className={IconStyle} />}
+					title="Bimbel"
+					description="Bimbingan belajar ke rumah"
+				/>
 			</section>
 			<section className="space-y-3">
-				<h2 className="text-lg text-zinc-500 text-center sm:text-left">Fitur Pendukung</h2>
-				<FeatureLink logo={<MagnifyingGlassIcon className={IconStyle} />} title="Pencarian" description="Sumber informasi pelajaran" />
-				<FeatureLink logo={<CalculatorIcon className={IconStyle} />} title="Kalkulator" description="Managemen pengerjaan soal" />
-				<FeatureLink logo={<ChartBarSquareIcon className={IconStyle} />} title="Statistik" description="Mengerjakan tes soal" />
-				<FeatureLink logo={<UserCircleIcon className={IconStyle} />} title="Profil" description="Bimbingan belajar ke rumah" />
+				<h2 className="text-lg text-zinc-500 text-center sm:text-left">
+					Fitur Pendukung
+				</h2>
+				<FeatureLink
+					logo={<MagnifyingGlassIcon className={IconStyle} />}
+					title="Pencarian"
+					description="Sumber informasi pelajaran"
+				/>
+				<FeatureLink
+					logo={<CalculatorIcon className={IconStyle} />}
+					title="Kalkulator"
+					description="Managemen pengerjaan soal"
+				/>
+				<FeatureLink
+					logo={<ChartBarSquareIcon className={IconStyle} />}
+					title="Statistik"
+					description="Mengerjakan tes soal"
+				/>
+				<FeatureLink
+					logo={<UserCircleIcon className={IconStyle} />}
+					title="Profil"
+					description="Bimbingan belajar ke rumah"
+				/>
 			</section>
 		</div>
 	);
 }
 
-function FeatureLink({ logo, title, description }: { logo: React.ReactNode; title: string; description: string }) {
+function FeatureLink({
+	logo,
+	title,
+	description,
+}: { logo: React.ReactNode; title: string; description: string }) {
 	return (
 		<Link
 			href={`/${title.toLowerCase()}`}

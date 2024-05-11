@@ -2,13 +2,15 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import type React from "react";
 
 export default function GlobalNavigationMobile() {
 	const pathname = usePathname();
 	const visibility = pathname === "/" ? "hidden" : "block sm:hidden";
 	return (
-		<div className={`sticky bottom-0 ${visibility} w-full border-t border-zinc-200 bg-white/90 saturate-150 backdrop-blur-lg`}>
+		<div
+			className={`sticky bottom-0 ${visibility} w-full border-t border-zinc-200 bg-white/90 saturate-150 backdrop-blur-lg`}
+		>
 			<div className="flex w-full items-center ">
 				{TitleAndPathData.map(({ title, path }) => (
 					<IconWrapper key={title} to={`/${title}`} path={path} />
@@ -39,7 +41,11 @@ const IconWrapper = ({ to, path }: { to: string; path: React.ReactNode }) => {
 	}
 
 	return (
-		<Link passHref href={`${to === "/home" ? "/" : to}`} className="block w-1/4 active:scale-95">
+		<Link
+			passHref
+			href={`${to === "/home" ? "/" : to}`}
+			className="block w-1/4 active:scale-95"
+		>
 			<div className="flex flex-col items-center justify-center py-[5px]">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -49,10 +55,13 @@ const IconWrapper = ({ to, path }: { to: string; path: React.ReactNode }) => {
 					fill="currentColor"
 					strokeWidth={1.5}
 				>
+					<title>Main Features Icon</title>
 					{path}
 				</svg>
 
-				<div className={`text-[11px] leading-[15px] -mt-[1px] ${color}`}>{capitalizeFirstLetter(to)}</div>
+				<div className={`text-[11px] leading-[15px] -mt-[1px] ${color}`}>
+					{capitalizeFirstLetter(to)}
+				</div>
 			</div>
 		</Link>
 	);

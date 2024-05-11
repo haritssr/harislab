@@ -14,7 +14,10 @@ export default function Breadcrumbs() {
 
 	return (
 		<div className="sm:px-5 py-1.5 bg-white sm:border-b sticky top-[45px] sm:-mx-5">
-			<Link className="hover:underline text-zinc-400 sm:text-lg hover:text-zinc-800" href="/">
+			<Link
+				className="hover:underline text-zinc-400 sm:text-lg hover:text-zinc-800"
+				href="/"
+			>
 				home
 			</Link>
 			{routes?.map((route, i, array) => {
@@ -24,7 +27,10 @@ export default function Breadcrumbs() {
 					</span>
 				) : (
 					<span key={route}>
-						<Link className="hover:underline text-zinc-400 hover:text-zinc-800" href={`${getUpto(routes, route)}`}>
+						<Link
+							className="hover:underline text-zinc-400 hover:text-zinc-800"
+							href={`${getUpto(routes, route)}`}
+						>
 							{route}
 						</Link>
 						&nbsp;&nbsp;<span className="text-zinc-400">/</span>&nbsp;&nbsp;

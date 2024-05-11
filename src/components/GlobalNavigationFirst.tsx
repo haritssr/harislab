@@ -1,4 +1,9 @@
-import { CalculatorIcon, ChartBarSquareIcon, MagnifyingGlassIcon, UserCircleIcon } from "@heroicons/react/24/outline";
+import {
+	CalculatorIcon,
+	ChartBarSquareIcon,
+	MagnifyingGlassIcon,
+	UserCircleIcon,
+} from "@heroicons/react/24/outline";
 import Link from "next/link";
 import MainFeatureLink from "./MainFeatureLink";
 
@@ -35,7 +40,13 @@ export default function GlobalNavigationFirst() {
 function HomeLink() {
 	return (
 		<Link href="/" className="space-x-2 flex items-center">
-			<svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 ">
+			<svg
+				viewBox="0 0 300 300"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+				className="w-5 h-5 "
+			>
+				<title>Home Icon</title>
 				<path
 					d="M0 64C0 41.5979 0 30.3968 4.35974 21.8404C8.19467 14.3139 14.3139 8.19467 21.8404 4.35974C30.3968 0 41.5979 0 64 0H236C258.402 0 269.603 0 278.16 4.35974C285.686 8.19467 291.805 14.3139 295.64 21.8404C300 30.3968 300 41.5979 300 64V100H0V64Z"
 					fill="#1D4ED8"

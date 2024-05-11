@@ -4,7 +4,11 @@ import Link from "next/link";
 export default function RiwayatPertemuan() {
 	return (
 		<>
-			<SecondNav backTo="/bimbel" backTitle="Bimbel" title="Riwayat Pertemuan" />
+			<SecondNav
+				backTo="/bimbel"
+				backTitle="Bimbel"
+				title="Riwayat Pertemuan"
+			/>
 
 			<div className="mt-5 sm:mt-10" />
 
@@ -24,7 +28,14 @@ export default function RiwayatPertemuan() {
 			{/* Data */}
 			<section className="space-y-3">
 				{dataRiwayatPertemuan.map(({ id, pelajaran, tanggal, guru, time }) => (
-					<IndividualRiwayatPertemuan key={id} id={id} pelajaran={pelajaran as "Matematika" | "Fisika"} tanggal={tanggal} guru={guru} time={time} />
+					<IndividualRiwayatPertemuan
+						key={id}
+						id={id}
+						pelajaran={pelajaran as "Matematika" | "Fisika"}
+						tanggal={tanggal}
+						guru={guru}
+						time={time}
+					/>
 				))}
 			</section>
 		</>
@@ -39,9 +50,18 @@ interface IndividualRiwayatPertemuanType {
 	time: string;
 }
 
-function IndividualRiwayatPertemuan({ id, pelajaran, tanggal, guru, time }: IndividualRiwayatPertemuanType) {
+function IndividualRiwayatPertemuan({
+	id,
+	pelajaran,
+	tanggal,
+	guru,
+	time,
+}: IndividualRiwayatPertemuanType) {
 	return (
-		<Link href={`/bimbel/riwayat-pertemuan/${id}`} className="block hover:bg-zinc-50 rounded-md border border-zinc-300 px-3 py-2">
+		<Link
+			href={`/bimbel/riwayat-pertemuan/${id}`}
+			className="block hover:bg-zinc-50 rounded-md border border-zinc-300 px-3 py-2"
+		>
 			<div className="flex items-center justify-between">
 				<div>{pelajaran}</div>
 				<div>{time}</div>

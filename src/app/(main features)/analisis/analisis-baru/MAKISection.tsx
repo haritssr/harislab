@@ -1,4 +1,8 @@
-import { ChevronDownIcon, PlusIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
+import {
+	ChevronDownIcon,
+	PlusIcon,
+	QuestionMarkCircleIcon,
+} from "@heroicons/react/24/outline";
 import * as Accordion from "@radix-ui/react-accordion";
 import * as Switch from "@radix-ui/react-switch";
 import * as Tooltip from "@radix-ui/react-tooltip";
@@ -10,10 +14,17 @@ export default function MAKISection() {
 	function handleOnType(e: React.ChangeEvent<HTMLTextAreaElement>) {
 		e.preventDefault();
 		console.log(e.target.value);
-		e.target.value.length > 0 ? setTextAreaFilled(true) : setTextAreaFilled(false);
+		e.target.value.length > 0
+			? setTextAreaFilled(true)
+			: setTextAreaFilled(false);
 	}
 	return (
-		<Accordion.Root className="rounded-md border border-zinc-300 overflow-hidden" type="single" defaultValue="item-1" collapsible>
+		<Accordion.Root
+			className="rounded-md border border-zinc-300 overflow-hidden"
+			type="single"
+			defaultValue="item-1"
+			collapsible
+		>
 			<Accordion.Item value="item-1" className="group">
 				<Accordion.Header className="w-full border-b border-zinc-300 pl-3 pr-2 py-1.5 bg-zinc-50 flex items-center justify-between  group-rdx-state-closed:border-none">
 					<div className="flex items-center space-x-2">
@@ -23,11 +34,23 @@ export default function MAKISection() {
 						<Tooltip.Provider>
 							<Tooltip.Root>
 								<Tooltip.Trigger className="flex items-center rounded px-1 py-0.5 hover:bg-zinc-100 ">
-									<QuestionMarkCircleIcon className="h-4 w-4 text-zinc-400" strokeWidth={2} />
+									<QuestionMarkCircleIcon
+										className="h-4 w-4 text-zinc-400"
+										strokeWidth={2}
+									/>
 								</Tooltip.Trigger>
-								<Tooltip.Content side="top" align="center" className="rounded-md shadow-md px-2.5 py-1.5 text-zinc-700 border bg-white">
+								<Tooltip.Content
+									side="top"
+									align="center"
+									className="rounded-md shadow-md px-2.5 py-1.5 text-zinc-700 border bg-white"
+								>
 									<div>Masalah adalah soal yang akan dikerjakan</div>
-									<Tooltip.Arrow offset={5} width={10} height={5} className="fill-zinc-300" />
+									<Tooltip.Arrow
+										offset={5}
+										width={10}
+										height={5}
+										className="fill-zinc-300"
+									/>
 								</Tooltip.Content>
 							</Tooltip.Root>
 						</Tooltip.Provider>
@@ -53,7 +76,10 @@ export default function MAKISection() {
 				</Accordion.Header>
 				<Accordion.Content>
 					{/* Rich Text Area */}
-					<textarea className="w-full px-3 py-2 focus:outline-none" onChange={handleOnType}></textarea>
+					<textarea
+						className="w-full px-3 py-2 focus:outline-none"
+						onChange={handleOnType}
+					/>
 
 					{/* Action Buttons */}
 					<section className="p-2 border-t border-zinc-300 flex items-center space-x-2">
@@ -69,7 +95,10 @@ export default function MAKISection() {
 
 function MAKIActionButton() {
 	return (
-		<button className="rounded-md px-1.5 py-0.5 border border-zinc-300 text-sm hover:bg-zinc-50 flex space-x-0.5 items-center hover:border-zinc-300">
+		<button
+			className="rounded-md px-1.5 py-0.5 border border-zinc-300 text-sm hover:bg-zinc-50 flex space-x-0.5 items-center hover:border-zinc-300"
+			type="button"
+		>
 			<span className="text-zinc-500">Action</span>
 			<PlusIcon className="h-[14px] w-[14px] text-zinc-500" strokeWidth={2} />
 		</button>
@@ -79,9 +108,9 @@ function MAKIActionButton() {
 function ThreeDots() {
 	return (
 		<div className="flex space-x-2 items-center ">
-			<div className="h-1.5 w-1.5 bg-zinc-400 rounded-full"></div>
-			<div className="h-1.5 w-1.5 bg-zinc-400 rounded-full"></div>
-			<div className="h-1.5 w-1.5 bg-zinc-400 rounded-full"></div>
+			<div className="h-1.5 w-1.5 bg-zinc-400 rounded-full" />
+			<div className="h-1.5 w-1.5 bg-zinc-400 rounded-full" />
+			<div className="h-1.5 w-1.5 bg-zinc-400 rounded-full" />
 		</div>
 	);
 }

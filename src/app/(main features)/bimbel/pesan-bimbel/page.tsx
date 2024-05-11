@@ -13,13 +13,17 @@ export default function OrderPage() {
 	}
 
 	const label = "flex items-center justify-between py-2.5";
-	const button = "bg-zinc-700 rounded-md text-white px-2.5 py-1 hover:bg-zinc-800";
+	const button =
+		"bg-zinc-700 rounded-md text-white px-2.5 py-1 hover:bg-zinc-800";
 
 	return (
 		<>
 			<SecondNav backTo="/bimbel" backTitle="Bimbel" title="Pesan Bimbel" />
 			<section className="mt-10">
-				<form action={handleOrder} className="divide-y divide-zinc-200 border border-zinc-200 rounded-md px-3">
+				<form
+					action={handleOrder}
+					className="divide-y divide-zinc-200 border border-zinc-200 rounded-md px-3"
+				>
 					<label className={label}>
 						<span className="font-medium">Nama :</span>
 						<input
@@ -65,12 +69,13 @@ export default function OrderPage() {
 					<div>
 						<div className="flex items-center justify-between pt-2.5">
 							<label>Guru</label>
-							<button className={button} onClick={handleCariGuru}>
+							<button className={button} onClick={handleCariGuru} type="button">
 								Cari Guru
 							</button>
 						</div>
 						<div className="flex justify-end text-sm text-zinc-400 pt-1.5 pb-2.5">
-							Guru akan dicarikan dalam radius 7 km dari lokasi yang anda cantumkan di profil.
+							Guru akan dicarikan dalam radius 7 km dari lokasi yang anda
+							cantumkan di profil.
 						</div>
 					</div>
 				</form>
