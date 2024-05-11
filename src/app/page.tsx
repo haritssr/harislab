@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Balancer from "react-wrap-balancer";
 import {
 	AcademicCapIcon,
 	BookOpenIcon,
@@ -22,12 +23,17 @@ export default function Home() {
 
 function Definition() {
 	return (
-		<section className="space-y-5 mt-14">
-			<div className="w-full flex justify-center">
-				<h1 className="text-2xl sm:text-4xl font-semibold text-zinc-800 text-center max-w-3xl">
-					Tempat Belajar dan Managemen Matematika Fisika Tingkat Sekolah
-					Menengah.
+		<section className="space-y-5 mt-14 sm:mt-20">
+			<div className="w-full justify-center space-y-4">
+				<h1 className="text-3xl sm:text-5xl font-bold text-zinc-800 text-center max-w-3xl sm:leading-tight">
+					<Balancer>Tempat pengelolaan matematika dan fisika.</Balancer>
 				</h1>
+				<p className="text-zinc-600 text-center w-full">
+					<Balancer>
+						Informasi, analisis, tes, dan pemesanan bimbel matematika fisika
+						tingkat sekolah menengah.
+					</Balancer>
+				</p>
 			</div>
 			<div className="flex items-center space-x-4 w-full justify-center ">
 				<Link
