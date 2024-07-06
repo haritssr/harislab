@@ -64,7 +64,7 @@ function Features() {
 				<FeatureLink
 					logo={<BookOpenIcon className={IconStyle} />}
 					title="Referensi"
-					description="Sumber informasi pelajaran"
+					description="Informasi dan data matematika fisika"
 				/>
 				<FeatureLink
 					logo={<ScaleIcon className={IconStyle} />}
@@ -73,8 +73,8 @@ function Features() {
 				/>
 				<FeatureLink
 					logo={<ClipboardDocumentListIcon className={IconStyle} />}
-					title="Tes"
-					description="Mengerjakan tes soal"
+					title="Ujian"
+					description="Mengerjakan soal dengan waktu"
 				/>
 				<FeatureLink
 					logo={<AcademicCapIcon className={IconStyle} />}
@@ -89,22 +89,22 @@ function Features() {
 				<FeatureLink
 					logo={<MagnifyingGlassIcon className={IconStyle} />}
 					title="Pencarian"
-					description="Sumber informasi pelajaran"
+					description="Cari informasi matematika fisika"
 				/>
 				<FeatureLink
 					logo={<CalculatorIcon className={IconStyle} />}
 					title="Kalkulator"
-					description="Managemen pengerjaan soal"
+					description="Aritmatika dan hubungan rumus"
 				/>
 				<FeatureLink
 					logo={<ChartBarSquareIcon className={IconStyle} />}
 					title="Statistik"
-					description="Mengerjakan tes soal"
+					description="Melihat perilaku seiring waktu"
 				/>
 				<FeatureLink
 					logo={<UserCircleIcon className={IconStyle} />}
 					title="Profil"
-					description="Bimbingan belajar ke rumah"
+					description="Data diri dan pengaturan"
 				/>
 			</section>
 		</div>
