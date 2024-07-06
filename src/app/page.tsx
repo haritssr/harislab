@@ -26,12 +26,12 @@ function Definition() {
 		<section className="space-y-5 mt-14 sm:mt-20">
 			<div className="w-full justify-center space-y-4">
 				<h1 className="text-3xl sm:text-5xl font-bold text-zinc-800 text-center max-w-3xl sm:leading-tight">
-					<Balancer>Tempat pengelolaan matematika dan fisika.</Balancer>
+					<Balancer>Tempat Pengelolaan Matematika dan Fisika.</Balancer>
 				</h1>
 				<p className="text-zinc-600 text-center w-full">
-					<Balancer>
-						Informasi, analisis, tes, dan pemesanan bimbel matematika fisika
-						tingkat sekolah menengah.
+					<Balancer className="sm:text-lg">
+						Referensi, Analisis, Tes, dan Bimbel Matematika Fisika tingkat
+						sekolah menengah.
 					</Balancer>
 				</p>
 			</div>
