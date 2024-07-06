@@ -11,7 +11,7 @@ export default function GlobalNavigationFirst() {
 	const IconStyle = "w-5 h-5 text-zinc-700 hover:text-zinc-400";
 	return (
 		<nav className="w-full sticky top-0 border-b">
-			<div className="max-w-6xl h-10 mx-auto flex justify-between items-center bg-white px-2 sm:px-0">
+			<div className="max-w-6xl h-10 mx-auto flex justify-between items-center bg-white px-2 xl:px-0">
 				<HomeLink />
 				<div className="space-x-10 hidden sm:block">
 					{["Referensi", "Analisis", "Ujian", "Bimbel"].map((to) => {
