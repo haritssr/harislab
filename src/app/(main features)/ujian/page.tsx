@@ -1,9 +1,9 @@
 import PageHeading from "@/components/PageHeading";
 
-export default function Tes() {
+export default function Ujian() {
 	return (
 		<section className="py-10">
-			<PageHeading>Tes</PageHeading>
+			<PageHeading>Ujian</PageHeading>
 		</section>
 	);
 }

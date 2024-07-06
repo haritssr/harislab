@@ -14,7 +14,7 @@ export default function GlobalNavigationFirst() {
 			<div className="max-w-6xl h-10 mx-auto flex justify-between items-center bg-white px-2 sm:px-0">
 				<HomeLink />
 				<div className="space-x-10 hidden sm:block">
-					{["Referensi", "Analisis", "Tes", "Bimbel"].map((to) => {
+					{["Referensi", "Analisis", "Ujian", "Bimbel"].map((to) => {
 						return <MainFeatureLink to={to} key={to} />;
 					})}
 				</div>

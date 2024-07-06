@@ -30,7 +30,7 @@ function Definition() {
 				</h1>
 				<p className="text-zinc-600 text-center w-full">
 					<Balancer className="sm:text-lg">
-						Referensi, Analisis, Tes, dan Bimbel Matematika Fisika tingkat
+						Referensi, Analisis, Ujian, dan Bimbel Matematika Fisika tingkat
 						sekolah menengah.
 					</Balancer>
 				</p>
