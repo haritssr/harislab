@@ -30,7 +30,7 @@ function Definition() {
 				</h1>
 				<p className="text-zinc-600 text-center w-full">
 					<Balancer className="sm:text-lg">
-						Referensi, Analisis, Ujian, dan Bimbel Matematika Fisika tingkat
+						Referensi, Analisis, Ujian, dan Bimbel matematika fisika tingkat
 						sekolah menengah.
 					</Balancer>
 				</p>
@@ -119,12 +119,12 @@ function FeatureLink({
 	return (
 		<Link
 			href={`/${title.toLowerCase()}`}
-			className="border border-zinc-300 hover:bg-zinc-100 bg-zinc-50 rounded-md px-2 pt-2 pb-1.5 flex space-x-2 "
+			className="group border border-zinc-300 hover:bg-blue-50 hover:border-blue-700 bg-zinc-50/50 rounded-md px-2 pt-2 pb-1.5 flex space-x-2"
 		>
-			{logo}
+			<div className="group-hover:text-blue-700">{logo}</div>
 			<div>
-				<p className="font-semibold">{title}</p>
-				<p className="text-zinc-600">{description}</p>
+				<p className="font-semibold group-hover:text-blue-700">{title}</p>
+				<p className="text-zinc-600 group-hover:text-blue-700">{description}</p>
 			</div>
 		</Link>
 	);
